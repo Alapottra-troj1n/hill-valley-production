@@ -12,8 +12,9 @@ module.exports = {
     },
    
     fontFamily: {
-      'display': 'Dynalight',
-      'type': 'Cormorant'
+      'extra': 'Dynalight',
+      'display': 'Cormorant',
+      'type': 'Montserrat'
     }
   },
   plugins: [require("daisyui")],

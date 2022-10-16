@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import styles from '../styles/home.module.css'
 export default function Home() {
 
 
@@ -17,6 +17,15 @@ export default function Home() {
 
 
 
+        <div  className={styles.homeBg} >
+
+        </div>
+
+
+
+        <div className='py-40 bg-white'>
+
+        </div>
 
 
 
@@ -25,7 +34,7 @@ export default function Home() {
 
 
 
-      <h2 className="text-4xl ">Hello World</h2>
+    
 
 
 
