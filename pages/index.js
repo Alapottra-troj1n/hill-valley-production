@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/home.module.css'
 import { HiOutlineMinus } from 'react-icons/hi';
 import { GiCheckMark } from 'react-icons/gi';
+import PhotoCard from '../components/PhotoCard';
 
 export default function Home() {
 
@@ -29,7 +30,7 @@ export default function Home() {
 
       {/*******  2ND SECTION *************/}
 
-      <div className='py-20 bg-white container mx-auto  font-type px-16'>
+      <div className='py-20 px-32 bg-white container mx-auto  font-type '>
 
         <h2 className='font-extra text-center text-5xl' >The Art of Making Memories Tangible</h2>
         <div className='border-b-2 mt-7 w-[50%] mx-auto border-main' ></div>
@@ -73,13 +74,13 @@ export default function Home() {
 
 
       <div className='py-20 bg-sky-50/50' >
-        <div className='container mx-auto' >
+        <div className='container mx-auto ' >
           <h2 className='font-display text-center text-3xl font-semibold' >OUR PACKAGES</h2>
 
 
           {/***************** PACKAGES *****************/}
 
-          <div className='grid grid-cols-3 mt-20 gap-16' >
+          <div className='grid grid-cols-3 mt-20 gap-36' >
 
             {/***************** PACKAGE 1 *****************/}
 
@@ -89,7 +90,7 @@ export default function Home() {
 
                 <div className='flex justify-center items-center text-3xl' >
                   <HiOutlineMinus className='text-main' />
-                  <h2 className='text-2xl mx-4 ' >THE BASIC</h2>
+                  <h2 className='text-xl mx-4 ' >THE BASIC</h2>
                   <HiOutlineMinus className='text-main' />
                 </div>
 
@@ -98,17 +99,14 @@ export default function Home() {
 
               </div>
 
-              <div className='mt-8 font-type flex flex-col gap-6'>
+              <div className='mt-8 font-type flex flex-col gap-6 text-sm'>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
                   <h2 className='px-4'>1 Photographer</h2>
                 </div>
 
-                <div className='flex items-center' >
-                  <GiCheckMark className='text-white text-xl' />
-                  <h2 className='px-4'>1 Cinematographer</h2>
-                </div>
+
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
@@ -120,17 +118,22 @@ export default function Home() {
                   <h2 className='px-4'>Print : 50 4r high quality matte print</h2>
                 </div>
 
-              
                 <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-white' />
+                  <GiCheckMark className='text-main text-xl' />
+                  <h2 className='px-4'>All photos are edited</h2>
+                </div>
+
+
+                <div className='flex items-center' >
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>Premium Photo Album with 12L Frame</h2>
                 </div>
                 <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-white' />
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>2-5 minutes Video trailer</h2>
                 </div>
                 <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-white' />
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>15-30 minutes full video </h2>
                 </div>
 
@@ -155,51 +158,52 @@ export default function Home() {
 
                 <div className='flex justify-center items-center text-3xl' >
                   <HiOutlineMinus className='text-main' />
-                  <h2 className='text-2xl mx-4 ' >THE MOMENTO</h2>
+                  <h2 className='text-xl mx-4 ' >THE BASIC</h2>
                   <HiOutlineMinus className='text-main' />
                 </div>
 
-                <h2 className='text-5xl mt-5' > <span className='text-main' >36,500</span> BDT</h2>
+                <h2 className='text-5xl mt-5' > <span className='text-main' >13,000</span> BDT</h2>
 
 
               </div>
 
-              <div className='mt-8 font-type flex flex-col gap-6'>
+              <div className='mt-8 font-type flex flex-col gap-6 text-sm'>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
-                  <h2 className='px-4'>Anik & 1 Photographer</h2>
+                  <h2 className='px-4'>1 Photographer</h2>
                 </div>
 
-                <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-main' />
-                  <h2 className='px-4'>1 Cinematographer</h2>
-                </div>
 
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
-                  <h2 className='px-4'>Duration 2 Day (8.00 am - 10.30 pm)</h2>
+                  <h2 className='px-4'>Duration 1 Day (8.00 am - 10.30 pm)</h2>
                 </div>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
-                  <h2 className='px-4'>Print : 50 copies 4r size, 20 copies 5L size </h2>
+                  <h2 className='px-4'>Print : 50 4r high quality matte print</h2>
                 </div>
 
                 <div className='flex items-center' >
-                  <GiCheckMark className='text-white text-xl' />
+                  <GiCheckMark className='text-main text-xl' />
+                  <h2 className='px-4'>All photos are edited</h2>
+                </div>
+
+
+                <div className='flex items-center' >
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>Premium Photo Album with 12L Frame</h2>
                 </div>
                 <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-main' />
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>2-5 minutes Video trailer</h2>
                 </div>
                 <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-main' />
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>15-30 minutes full video </h2>
                 </div>
-              
 
 
               </div>
@@ -223,51 +227,52 @@ export default function Home() {
 
                 <div className='flex justify-center items-center text-3xl' >
                   <HiOutlineMinus className='text-main' />
-                  <h2 className='text-2xl mx-4 ' >THE SIGNATURE</h2>
+                  <h2 className='text-xl mx-4 ' >THE BASIC</h2>
                   <HiOutlineMinus className='text-main' />
                 </div>
 
-                <h2 className='text-5xl mt-5' > <span className='text-main' >60,000</span> BDT</h2>
+                <h2 className='text-5xl mt-5' > <span className='text-main' >13,000</span> BDT</h2>
 
 
               </div>
 
-              <div className='mt-8 font-type flex flex-col gap-6'>
+              <div className='mt-8 font-type flex flex-col gap-6 text-sm'>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
-                  <h2 className='px-4'>Antar, Anik & 1 Photographer</h2>
+                  <h2 className='px-4'>1 Photographer</h2>
                 </div>
 
-                <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-main' />
-                  <h2 className='px-4'>2 Cinematographer</h2>
-                </div>
 
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
-                  <h2 className='px-4'>Duration 2 Day (8.00 am - 10.30 pm)</h2>
+                  <h2 className='px-4'>Duration 1 Day (8.00 am - 10.30 pm)</h2>
                 </div>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
-                  <h2 className='px-4'>Print : 50 copies 4r size, 20 copies 5L size </h2>
+                  <h2 className='px-4'>Print : 50 4r high quality matte print</h2>
                 </div>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
+                  <h2 className='px-4'>All photos are edited</h2>
+                </div>
+
+
+                <div className='flex items-center' >
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>Premium Photo Album with 12L Frame</h2>
                 </div>
                 <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-main' />
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>2-5 minutes Video trailer</h2>
                 </div>
                 <div className='flex items-center' >
-                  <GiCheckMark className=' text-xl text-main' />
+                  <GiCheckMark className=' text-white text-xl' />
                   <h2 className='px-4'>15-30 minutes full video </h2>
                 </div>
-              
 
 
               </div>
@@ -287,13 +292,12 @@ export default function Home() {
 
 
 
-
           </div>
 
           <div className='text-center mt-14'>
-                
-                    <button className='px-10 py-2 bg-gray-300/75 font-display text-xl rounded-md'>See more</button>
-                   
+
+            <button className='px-10 py-2 bg-gray-300/75 font-display text-xl rounded-md hover:bg-gray-300 transition-all' >See more</button>
+
           </div>
 
 
@@ -310,7 +314,14 @@ export default function Home() {
 
       {/************* 4TH SECTION *************/}
 
-      <div className='py-32 bg-white'>
+      <div className='py-32 bg-white container mx-auto'>
+
+        <div className='grid grid-cols-3 gap-20' >
+          <PhotoCard />
+          <PhotoCard />
+          <PhotoCard />
+
+        </div>
 
       </div>
 
