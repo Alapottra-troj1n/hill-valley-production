@@ -32,7 +32,7 @@ export default function Home() {
 
       {/*******  2ND SECTION *************/}
 
-      <div className='py-20 px-32 bg-white container mx-auto  font-type '>
+      <div className='py-20 px-1 lg:px-32 bg-white container mx-auto  font-type '>
 
         <h2 className='font-extra text-center text-5xl' >The Art of Making Memories Tangible</h2>
         <div className='border-b-2 mt-7 w-[50%] mx-auto border-main' ></div>
@@ -44,24 +44,24 @@ export default function Home() {
         <div className='grid grid-cols-1 mt-16 gap-5' >
 
           <div className='grid grid-cols-2 gap-5'>
-            <div className='relative h-[534px] w-full' >
+            <div className='relative lg:h-[534px] h-[334px] w-full' >
               <Image layout='fill' objectFit='cover' src={'/homepage1.png'} />
             </div>
-            <div className='relative h-[534px] w-full' >
+            <div className='relative lg:h-[534px] h-[334px] w-full' >
               <Image layout='fill' objectFit='cover' src={'/homepage2.png'} />
             </div>
           </div>
 
-          <div className='relative h-[634px] w-full' >
+          <div className='relative lg:h-[634px] h-[434px] w-full' >
             <Image layout='fill' objectFit='cover' objectPosition={'center'} src={'/homepage3.png'} />
           </div>
 
 
           <div className='grid grid-cols-2 gap-5'>
-            <div className='relative h-[805px] w-full' >
+            <div className='relative lg:h-[805px] h-[505px] w-full' >
               <Image layout='fill' objectFit='cover' src={'/homepage4.png'} />
             </div>
-            <div className='relative h-[805px] w-full' >
+            <div className='relative lg:h-[805px] h-[505px] w-full' >
               <Image layout='fill' objectFit='cover' src={'/homepage5.png'} />
             </div>
           </div>
