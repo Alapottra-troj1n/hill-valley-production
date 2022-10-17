@@ -1,5 +1,5 @@
 .homeBg{
-    background:linear-gradient(0deg, rgba(9, 9, 9, 0.079), rgba(9, 9, 9, 0.084)), url('/herosection.png');
+    background:linear-gradient(0deg, rgba(9, 9, 9, 0), rgba(9, 9, 9, 0)), url('/herosection.png');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;

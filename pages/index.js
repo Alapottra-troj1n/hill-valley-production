@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from '../styles/home.module.css'
 export default function Home() {
 
@@ -17,16 +18,54 @@ export default function Home() {
 
 
 
-        <div  className={styles.homeBg} >
+      <div className={styles.homeBg} >
+
+      </div>
+
+
+
+      <div className='py-40 bg-white container mx-auto text-slate-600 font-type px-16'>
+
+        <h2 className='font-extra text-center text-5xl' >The Art of Making Memories Tangible</h2>
+        <div className='border-b-2 mt-7 w-[50%] mx-auto border-main' ></div>
+        <p className='mt-11 ' >The photography business isn’t just about picking up a camera and taking stunning photos. It’s hard work that also involves planning strategies that will help you take your business to the next level. Great photography is about depth of feeling, not depth of field.</p>
+
+
+
+
+        <div className='grid grid-cols-1 mt-16 gap-5' >
+
+          <div className='grid grid-cols-2 gap-5'>
+            <div className='relative h-[534px] w-full' >
+              <Image layout='fill' objectFit='cover' src={'/homepage1.png'} />
+            </div>
+            <div className='relative h-[534px] w-full' >
+              <Image layout='fill' objectFit='cover' src={'/homepage2.png'} />
+            </div>
+          </div>
+
+          <div className='relative h-[634px] w-full' >
+            <Image layout='fill' objectFit='cover' objectPosition={'center'} src={'/homepage3.png'} />
+          </div>
+
+
+          <div className='grid grid-cols-2 gap-5'>
+            <div className='relative h-[805px] w-full' >
+              <Image layout='fill' objectFit='cover' src={'/homepage4.png'} />
+            </div>
+            <div className='relative h-[805px] w-full' >
+              <Image layout='fill' objectFit='cover' src={'/homepage5.png'} />
+            </div>
+          </div>
+
+
 
         </div>
 
 
 
-        <div className='py-40 bg-white'>
 
-        </div>
-
+      </div>
 
 
 
@@ -34,7 +73,8 @@ export default function Home() {
 
 
 
-    
+
+
 
 
 

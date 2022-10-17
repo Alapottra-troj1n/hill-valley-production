@@ -6,11 +6,11 @@ const Navbar = () => {
 
 
     const navLinks = <>
-        <Link href={'/'} ><li className='cursor-pointer hover:text-main transition-all' >FLIMS</li></Link>
-        <Link href={'/'} ><li className='cursor-pointer hover:text-main transition-all' >PHOTOGRAPHY</li></Link>
-        <Link href={'/'} ><li className='cursor-pointer hover:text-main transition-all' >PACKAGES</li></Link>
-        <Link href={'/'} ><li className='cursor-pointer hover:text-main transition-all' >QUESTIONS</li></Link>
-        <Link href={'/'} ><li className='cursor-pointer hover:text-main transition-all' >CONTACT</li></Link>
+        <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >FLIMS</li></Link>
+        <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >PHOTOGRAPHY</li></Link>
+        <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >PACKAGES</li></Link>
+        <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >QUESTIONS</li></Link>
+        <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >CONTACT</li></Link>
        
     </>
 
@@ -26,7 +26,6 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className='text-white' d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-52 gap-8 lg:text-white p-5">
-
                             {navLinks}
                         </ul>
                     </div>

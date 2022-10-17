@@ -7,13 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        main: "#FFA41F"
+        main: "#FFA41F",
+        main_light: "#f7bc3b"
       }
     },
    
     fontFamily: {
       'extra': 'Dynalight',
-      'display': 'Cormorant',
+      'display': 'Spectral',
       'type': 'Montserrat'
     }
   },
