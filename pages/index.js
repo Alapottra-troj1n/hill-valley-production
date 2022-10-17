@@ -3,7 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/home.module.css'
 import { HiOutlineMinus } from 'react-icons/hi';
 import { GiCheckMark } from 'react-icons/gi';
+import { MdArrowForwardIos } from 'react-icons/md';
 import PhotoCard from '../components/PhotoCard';
+
 
 export default function Home() {
 
@@ -316,16 +318,49 @@ export default function Home() {
 
       <div className='py-32 bg-white container mx-auto'>
 
-        <div className='grid grid-cols-3 gap-20' >
+
+
+        <div className='grid grid-cols-2 gap-20' >
           <PhotoCard />
+          <PhotoCard />
+        </div>
+        <div className='text-center py-40' >Flower</div>
+        <div className='grid grid-cols-2 gap-20' >
           <PhotoCard />
           <PhotoCard />
 
         </div>
 
+
+
+
       </div>
 
 
+      {/************* 5TH SECTION *************/}
+
+
+
+      <div className='py-32 bg-white  '>
+
+
+        {/* <div className={styles.bgVideo} >
+        <video src={"/video.mp4"} autoPlay loop mute   />
+        </div> */}
+
+        <div className={styles.secondBg} >
+
+          <div className='flex justify-center items-center h-full' >
+            <div className='flex justify-center items-center' >
+              <button className='bg-transparent px-7 py-3 rounded-lg  font-display text-white text-lg flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >view videos <MdArrowForwardIos className='text-sm' /> </button>  
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
 
 
 
