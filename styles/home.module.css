@@ -41,4 +41,14 @@
         background-attachment: fixed;
     }
 
+    .secondBg{
+        background:linear-gradient(0deg, rgba(9, 9, 9, 0.0), rgba(9, 9, 9, 0.0)), url('/4bg.jpg');
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: -920px center;
+      
+    }
+
 }

@@ -361,7 +361,9 @@ export default function Home() {
         <div className={styles.secondBg} >
 
           <div className='flex justify-center flex-col gap-4 items-center h-full' >
-            <Image alt='logo' src={'/Logo.png'} height={104} width={221} />
+            <div className="cursor-pointer text-xl relative lg:w-[221px] lg:h-[104px] w-36 h-16 ">
+              <Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' />
+            </div>
             <div className='flex justify-center items-center' >
 
               <button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
@@ -435,7 +437,7 @@ export default function Home() {
 
         </div>
 
-        <div className='w-full xl:h-80 h-52 lg:h-64 relative mt-16' >
+        <div className='w-full xl:h-80  h-44 relative mt-16' >
           <Image alt='photo-frame' src={'/frames.jpg'} layout='fill' objectFit='cover' objectPosition='center' />
         </div>
       </div>
