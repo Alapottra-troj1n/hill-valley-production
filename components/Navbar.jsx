@@ -29,7 +29,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <div className="cursor-pointer text-xl relative w-[147px] h-[69px]">
+                    <div className="cursor-pointer text-xl relative lg:w-[147px] lg:h-[69px] w-24 h-10 ">
                         <Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' />
                     </div>
                 </div>

@@ -28,3 +28,17 @@
     background-position: center center;
   
 }
+
+
+@media screen and (max-width: 667px){
+
+    .homeBg{
+        background:linear-gradient(0deg, rgba(9, 9, 9, 0), rgba(9, 9, 9, 0)), url('/herosection.jpg');
+        height: 80vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -235px  center;
+        background-attachment: fixed;
+    }
+
+}
