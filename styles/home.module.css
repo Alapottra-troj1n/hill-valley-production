@@ -37,8 +37,8 @@
         height: 80vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: -135px  center;
-        background-attachment: local;
+        background-position: -250px  center;
+        background-attachment: fixed;
     }
 
     .secondBg{
@@ -46,8 +46,8 @@
         height: 80vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: local;
-        background-position: -700px center;
+        background-attachment: fixed;
+        background-position: -1050px top;
       
     }
 
