@@ -45,10 +45,10 @@ export default function Home() {
 
           <div className='grid grid-cols-2 gap-5'>
             <div className='relative lg:h-[534px] h-[334px] w-full' >
-              <Image layout='fill' objectFit='cover' src={'/homepage1.png'} />
+              <Image layout='fill' objectFit='cover' src={'/homepage1.jpg'} />
             </div>
             <div className='relative lg:h-[534px] h-[334px] w-full' >
-              <Image layout='fill' objectFit='cover' src={'/homepage2.png'} />
+              <Image layout='fill' objectFit='cover' src={'/homepage2.jpg'} />
             </div>
           </div>
 
@@ -59,10 +59,10 @@ export default function Home() {
 
           <div className='grid grid-cols-2 gap-5'>
             <div className='relative lg:h-[805px] h-[505px] w-full' >
-              <Image layout='fill' objectFit='cover' src={'/homepage4.png'} />
+              <Image layout='fill' objectFit='cover' src={'/homepage4.jpg'} />
             </div>
             <div className='relative lg:h-[805px] h-[505px] w-full' >
-              <Image layout='fill' objectFit='cover' src={'/homepage5.png'} />
+              <Image layout='fill' objectFit='cover' src={'/homepage5.jpg'} />
             </div>
           </div>
 
@@ -329,13 +329,13 @@ export default function Home() {
 
 
         <div className='grid grid-cols-2 gap-20' >
-          <PhotoCard img={'/couple1.png'} name={'PRITIKA & SUBHRAM'} />
-          <PhotoCard img={'/couple2.png'} name={'ALEX & ALISHA'} />
+          <PhotoCard img={'/couple1.jpg'} name={'PRITIKA & SUBHRAM'} />
+          <PhotoCard img={'/couple2.jpg'} name={'ALEX & ALISHA'} />
         </div>
         <div className='text-center py-20' ></div>
         <div className='grid grid-cols-2 gap-20' >
-          <PhotoCard img={'/couple3.png'} name={'JIMI & DRISTI'}  />
-          <PhotoCard img={'/couple4.png'} name={'DEEDHITI & AVI'} />
+          <PhotoCard img={'/couple3.jpg'} name={'JIMI & DRISTI'}  />
+          <PhotoCard img={'/couple4.jpg'} name={'DEEDHITI & AVI'} />
 
         </div>
 
@@ -427,11 +427,15 @@ export default function Home() {
       {/************* 7TH SECTION *************/}
 
 
-        <div className='pb-20 bg-white' >
+        <div className=' bg-white' >
             <div className='text-center' >
             <h2 className='font-display text-2xl' >Follow us on Instagram</h2>
             <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
          
+            </div>
+
+            <div className='w-full h-80 relative mt-16' >
+              <Image src={'/frames.jpg'} layout='fill' objectFit='cover' objectPosition='center' />
             </div>
         </div>
 
