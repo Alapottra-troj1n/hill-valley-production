@@ -380,7 +380,7 @@ export default function Home() {
         <h2 className='font-display text-2xl text-center' >Contact us</h2>
 
         <div className='flex justify-center mt-20 w-full' >
-          <form className='font-type mt-2 flex flex-col gap-7 text-sm' >
+          <form className='font-type mt-2 flex flex-col gap-7 text-sm w-[80%]' >
 
             <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
               <label htmlFor='clientName' >Name :</label>
@@ -409,7 +409,7 @@ export default function Home() {
 
             <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
               <label >Message :</label>
-              <textarea className="border-b border-slate-700 w-96 h-48 p-2" />
+              <textarea className="border-b border-slate-700 lg:w-96 w-[80%]  h-48 p-2" />
 
             </div>
 
