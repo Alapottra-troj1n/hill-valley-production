@@ -4,7 +4,7 @@ import React from 'react';
 const PhotoCard = ({img,name}) => {
     return (
         <div  className="h-full  " >
-            <div className='relative h-[562px]  lg:w-full' >
+            <div className='relative lg:h-[562px] h-[320px]  lg:w-full' >
                 <Image alt='logo' layout='fill' objectFit='contain' src={img} />
             </div>
             <h2 className='font-display text-xl text-center mt-3 cursor-pointer ' >{name}</h2>
