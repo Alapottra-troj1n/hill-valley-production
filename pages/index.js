@@ -36,7 +36,7 @@ export default function Home() {
 
         <h2 className='font-extra text-center text-3xl lg:text-5xl' >The Art of Making Memories Tangible</h2>
         <div className='border-b-2 mt-7 w-[50%] mx-auto border-main' ></div>
-        <p className='mt-11 lg:text-md text-xs px-2 lg:px-0' >The photography business isn’t just about picking up a camera and taking stunning photos. It’s hard work that also involves planning strategies that will help you take your business to the next level. Great photography is about depth of feeling, not depth of field.</p>
+        <p className='mt-11 lg:text-base text-xs px-4 leading-5 lg:px-0' >The photography business isn’t just about picking up a camera and taking stunning photos. It’s hard work that also involves planning strategies that will help you take your business to the next level. Great photography is about depth of feeling, not depth of field.</p>
 
 
 
@@ -44,24 +44,24 @@ export default function Home() {
         <div className='grid grid-cols-1 mt-16 gap-5 px-2 lg:px-0' >
 
           <div className='grid grid-cols-2 gap-5'>
-            <div className='relative lg:h-[534px] h-[334px] w-full' >
+            <div className='relative lg:h-[534px] h-[154px] w-full' >
               <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage1.jpg'} />
             </div>
-            <div className='relative lg:h-[534px] h-[334px] w-full' >
+            <div className='relative lg:h-[534px] h-[154px] w-full' >
               <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage2.jpg'} />
             </div>
           </div>
 
-          <div className='relative lg:h-[634px] h-[434px] w-full' >
+          <div className='relative lg:h-[634px] h-[234px] w-full' >
             <Image layout='fill' objectFit='cover' alt='homepagephoto' objectPosition={'center'} src={'/homepage3.jpg'} />
           </div>
 
 
           <div className='grid grid-cols-2 gap-5'>
-            <div className='relative lg:h-[805px] h-[505px] w-full' >
+            <div className='relative lg:h-[805px] h-[255px] w-full' >
               <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage4.jpg'} />
             </div>
-            <div className='relative lg:h-[805px] h-[505px] w-full' >
+            <div className='relative lg:h-[805px] h-[255px] w-full' >
               <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage5.jpg'} />
             </div>
           </div>
