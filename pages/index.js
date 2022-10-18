@@ -53,7 +53,7 @@ export default function Home() {
           </div>
 
           <div className='relative lg:h-[634px] h-[434px] w-full' >
-            <Image layout='fill' objectFit='cover' alt='homepagephoto' objectPosition={'center'} src={'/homepage3.png'} />
+            <Image layout='fill' objectFit='cover' alt='homepagephoto' objectPosition={'center'} src={'/homepage3.jpg'} />
           </div>
 
 
