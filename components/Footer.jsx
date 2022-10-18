@@ -4,7 +4,7 @@ import React from 'react';
 import { AiFillFacebook,AiFillYoutube,AiFillInstagram } from 'react-icons/ai';
 const Footer = () => {
     return (
-        <div className="bg-[#363535] text-white pt-36 pb-20 flex justify-around items-center" >
+        <div className="bg-[#363535] text-white pt-36 pb-20 flex flex-col xl:flex-row gap-16 xl:gap-0 justify-around items-center px-6 lg:px-0" >
 
             <div className="flex gap-10 text-lg font-display list-none" >
                 <div className="flex flex-col gap-3 " >
@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="flex flex-col items-center gap-5" >
 
                 <Image src={'/Logo.png'} height={104} width={221} />
-                <p className='text-sm font-type text-center' >When you acquire an understanding of the science behind light and what governs it, then you can <br />  predict its behavior and control the lighting in photographs.</p>
+                <p className='lg:text-sm font-type text-center text-xs' >When you acquire an understanding of the science behind light and what governs it, then you can <br />  predict its behavior and control the lighting in photographs.</p>
 
 
             </div>

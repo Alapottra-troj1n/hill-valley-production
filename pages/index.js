@@ -34,14 +34,14 @@ export default function Home() {
 
       <div className='py-20 px-1 lg:px-32 bg-white container mx-auto  font-type '>
 
-        <h2 className='font-extra text-center text-5xl' >The Art of Making Memories Tangible</h2>
+        <h2 className='font-extra text-center text-3xl lg:text-5xl' >The Art of Making Memories Tangible</h2>
         <div className='border-b-2 mt-7 w-[50%] mx-auto border-main' ></div>
-        <p className='mt-11 ' >The photography business isn’t just about picking up a camera and taking stunning photos. It’s hard work that also involves planning strategies that will help you take your business to the next level. Great photography is about depth of feeling, not depth of field.</p>
+        <p className='mt-11 lg:text-md text-xs px-2 lg:px-0' >The photography business isn’t just about picking up a camera and taking stunning photos. It’s hard work that also involves planning strategies that will help you take your business to the next level. Great photography is about depth of feeling, not depth of field.</p>
 
 
 
 
-        <div className='grid grid-cols-1 mt-16 gap-5' >
+        <div className='grid grid-cols-1 mt-16 gap-5 px-2 lg:px-0' >
 
           <div className='grid grid-cols-2 gap-5'>
             <div className='relative lg:h-[534px] h-[334px] w-full' >
@@ -77,12 +77,12 @@ export default function Home() {
 
       <div className='py-20 bg-sky-50/50' >
         <div className='container mx-auto ' >
-          <h2 className='font-display text-center text-3xl font-semibold' >OUR PACKAGES</h2>
+          <h2 className='font-display text-center lg:text-3xl text-2xl  font-semibold' >OUR PACKAGES</h2>
 
 
           {/***************** PACKAGES *****************/}
 
-          <div className='grid grid-cols-1 lg:grid-cols-3 mt-20 gap-36' >
+          <div className='grid grid-cols-1 lg:grid-cols-3 mt-20 gap-36 px-10 lg:px-0' >
 
             {/***************** PACKAGE 1 *****************/}
 
@@ -92,16 +92,16 @@ export default function Home() {
 
                 <div className='flex justify-center items-center text-3xl' >
                   <HiOutlineMinus className='text-main' />
-                  <h2 className='text-xl mx-4 ' >THE BASIC</h2>
+                  <h2 className='lg:text-xl text-base mx-4 ' >THE BASIC</h2>
                   <HiOutlineMinus className='text-main' />
                 </div>
 
-                <h2 className='text-5xl mt-5' > <span className='text-main' >13,000</span> BDT</h2>
+                <h2 className='lg:text-5xl text-4xl mt-5' > <span className='text-main' >13,000</span> BDT</h2>
 
 
               </div>
 
-              <div className='mt-8 font-type flex flex-col gap-6 text-sm'>
+              <div className='mt-8 font-type flex flex-col gap-6 text-xs lg:text-sm'>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
@@ -146,9 +146,9 @@ export default function Home() {
 
               </div>
 
-              <div className='mt-9 text-center font-display text-xl '>
+              <div className='mt-9 text-center font-display '>
 
-                <button className='px-10 py-3 border-2 border-main rounded-md hover:bg-main hover:text-white transition-all' >Get Started</button>
+                <button className='lg:px-10 px-5 lg:py-3 py-2 text-sm lg:text-xl  border-2 border-main rounded-md hover:bg-main hover:text-white transition-all' >Get Started</button>
 
               </div>
 
@@ -164,16 +164,16 @@ export default function Home() {
 
                 <div className='flex justify-center items-center text-3xl' >
                   <HiOutlineMinus className='text-main' />
-                  <h2 className='text-xl mx-4 ' >THE MOMENTO</h2>
+                  <h2 className='lg:text-xl text-base mx-4 ' >THE MOMENTO</h2>
                   <HiOutlineMinus className='text-main' />
                 </div>
 
-                <h2 className='text-5xl mt-5' > <span className='text-main' >36,500</span> BDT</h2>
+                <h2 className='lg:text-5xl text-4xl mt-5' > <span className='text-main' >36,500</span> BDT</h2>
 
 
               </div>
 
-              <div className='mt-8 font-type flex flex-col gap-6 text-sm'>
+              <div className='mt-8 font-type flex flex-col gap-6 lg:text-sm text-xs'>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
@@ -218,9 +218,9 @@ export default function Home() {
 
               </div>
 
-              <div className='mt-9 text-center font-display text-xl '>
+              <div className='mt-9 text-center font-display '>
 
-                <button className='px-10 py-3 border-2 border-main rounded-md hover:bg-main hover:text-white transition-all' >Get Started</button>
+                <button className='lg:px-10 px-5 lg:py-3 py-2 text-sm lg:text-xl  border-2 border-main rounded-md hover:bg-main hover:text-white transition-all' >Get Started</button>
 
               </div>
 
@@ -238,16 +238,16 @@ export default function Home() {
 
                 <div className='flex justify-center items-center text-3xl' >
                   <HiOutlineMinus className='text-main' />
-                  <h2 className='text-xl mx-4 ' >THE SIGNATURE</h2>
+                  <h2 className='lg:text-xl text-base mx-4 ' >THE SIGNATURE</h2>
                   <HiOutlineMinus className='text-main' />
                 </div>
 
-                <h2 className='text-5xl mt-5' > <span className='text-main' >60,000</span> BDT</h2>
+                <h2 className='lg:text-5xl text-4xl mt-5' > <span className='text-main' >60,000</span> BDT</h2>
 
 
               </div>
 
-              <div className='mt-8 font-type flex flex-col gap-6 text-sm'>
+              <div className='mt-8 font-type flex flex-col gap-6 lg:text-sm text-xs'>
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
@@ -292,9 +292,9 @@ export default function Home() {
 
               </div>
 
-              <div className='mt-9 text-center font-display text-xl '>
+              <div className='mt-9 text-center font-display '>
 
-                <button className='px-10 py-3 border-2 border-main rounded-md hover:bg-main hover:text-white transition-all' >Get Started</button>
+                <button className='lg:px-10 px-5 lg:py-3 py-2 text-sm lg:text-xl  border-2 border-main rounded-md hover:bg-main hover:text-white transition-all' >Get Started</button>
 
               </div>
 
@@ -308,7 +308,7 @@ export default function Home() {
 
           </div>
 
-          <div className='flex justify-center mt-10'><button className='bg-transparent px-7 py-3 rounded-lg  font-display text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >See All Packages <MdArrowForwardIos className='text-sm' /> </button></div>
+          <div className='flex justify-center mt-10'><button className='bg-transparent lg:px-7 px-5 py-3 rounded-lg  font-display text-sm lg:text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >See All Packages <MdArrowForwardIos className='text-sm' /> </button></div>
 
 
 
@@ -324,22 +324,23 @@ export default function Home() {
 
       {/************* 4TH SECTION *************/}
 
-      <div className='py-20 bg-white container mx-auto'>
+      <div className='py-20 bg-white container mx-auto px-4 lg:px-0'>
 
 
 
-        <div className='grid grid-cols-2 gap-20' >
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
           <PhotoCard img={'/couple1.jpg'} name={'PRITIKA & SUBHRAM'} />
           <PhotoCard img={'/couple2.jpg'} name={'ALEX & ALISHA'} />
         </div>
         <div className='text-center py-20' ></div>
-        <div className='grid grid-cols-2 gap-20' >
-          <PhotoCard img={'/couple3.jpg'} name={'JIMI & DRISTI'}  />
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
+          <PhotoCard img={'/couple3.jpg'} name={'JIMI & DRISTI'} />
           <PhotoCard img={'/couple4.jpg'} name={'DEEDHITI & AVI'} />
 
         </div>
 
-        <div className='flex justify-center mt-10'><button className='bg-transparent px-7 py-3 rounded-lg  font-display text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >More Photos <MdArrowForwardIos className='text-sm' /> </button></div>
+        
+        <div className='flex justify-center mt-10'><button className='bg-transparent lg:px-7 px-5 py-3 rounded-lg  font-display text-sm lg:text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >More Photos <MdArrowForwardIos className='text-sm' /></button></div>
 
 
 
@@ -360,10 +361,10 @@ export default function Home() {
         <div className={styles.secondBg} >
 
           <div className='flex justify-center flex-col gap-4 items-center h-full' >
-          <Image src={'/Logo.png'} height={104} width={221} />
+            <Image src={'/Logo.png'} height={104} width={221} />
             <div className='flex justify-center items-center' >
-             
-              <button className='bg-transparent px-7 py-3 rounded-lg  font-display text-white text-lg flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
+
+              <button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
             </div>
           </div>
 
@@ -381,32 +382,32 @@ export default function Home() {
         <div className='flex justify-center mt-20 w-full' >
           <form className='font-type mt-2 flex flex-col gap-7 text-sm' >
 
-            <div className='flex gap-20 items-center justify-between' >
-              <label htmlFor='clientname' >Name :</label>
-              <input type="text" name="clientName" id="clientName" className="border-b border-slate-700 w-96  py-1  px-2" />
+          <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
+              <label htmlFor='clientName' >Name :</label>
+              <input type="text" name="clientName" id="clientName" className="border-b border-slate-700 xl:w-96 py-1 px-2 w-[80%]" />
             </div>
 
-            <div className='flex items-center justify-between' >
+            <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
               <label htmlFor='clientEmail' >Email :</label>
-              <input type="text" name="clientEmail" id="clientEmail" className="border-b border-slate-700 w-96 py-1 px-2" />
+              <input type="text" name="clientEmail" id="clientEmail" className="border-b border-slate-700 xl:w-96 py-1 px-2 w-[80%]" />
             </div>
 
-            <div className='flex items-center justify-between' >
+            <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
               <label htmlFor='clientPhone' >Phone :</label>
-              <input type="tel" name="clientPhone" id="clientPhone" className="border-b border-slate-700 w-96 py-1  px-2" />
+              <input type="tel" name="clientPhone" id="clientPhone" className="border-b border-slate-700 xl:w-96 py-1  px-2 w-[80%]" />
             </div>
 
-            <div className='flex items-center justify-between' >
+            <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
               <label htmlFor='clientAddress' >Address :</label>
-              <input type="text" name="clientAddress" id="clientAddress" className="border-b border-slate-700 w-96 py-1  px-2" />
+              <input type="text" name="clientAddress" id="clientAddress" className="border-b border-slate-700 xl:w-96 py-1  px-2 w-[80%]" />
             </div>
 
-            <div className='flex items-center justify-between' >
+            <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
               <label htmlFor='clientDate' >Date :</label>
-              <input type="date" name="clientDate" id="clientDate" className="border-b border-slate-700 w-96 py-1  px-2" />
+              <input type="date" name="clientDate" id="clientDate" className="border-b border-slate-700 xl:w-96 py-1  px-2 w-[80%]" />
             </div>
 
-            <div className='flex items-start justify-between' >
+            <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
               <label >Message :</label>
               <textarea className="border-b border-slate-700 w-96 h-48 p-2" />
 
@@ -427,17 +428,17 @@ export default function Home() {
       {/************* 7TH SECTION *************/}
 
 
-        <div className=' bg-white' >
-            <div className='text-center' >
-            <h2 className='font-display text-2xl' >Follow us on Instagram</h2>
-            <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
-         
-            </div>
+      <div className=' bg-white' >
+        <div className='text-center' >
+          <h2 className='font-display text-2xl' >Follow us on Instagram</h2>
+          <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
 
-            <div className='w-full h-80 relative mt-16' >
-              <Image src={'/frames.jpg'} layout='fill' objectFit='cover' objectPosition='center' />
-            </div>
         </div>
+
+        <div className='w-full xl:h-80 h-52 lg:h-64 relative mt-16' >
+          <Image src={'/frames.jpg'} layout='fill' objectFit='cover' objectPosition='center' />
+        </div>
+      </div>
 
 
 
