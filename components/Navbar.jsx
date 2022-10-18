@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="absolute w-full">
             <div className="py-4 font-display font-semibold text-[16px] tracking-wide">
             <div className="navbar container mx-auto ">
-                <div className="navbar-start justify-between  w-full">
+                <div className="lg:navbar-start justify-between  w-full">
                     <div className="dropdown ">
                        
                        <label tabIndex={0} className="btn btn-ghost lg:hidden mr-4">
