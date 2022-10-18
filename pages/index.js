@@ -189,7 +189,7 @@ export default function Home() {
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
-                  <h2 className='px-4'>Duration 1 Day (8am - 10:30pm)</h2>
+                  <h2 className='px-4'>Duration 2 Day (8am - 10:30pm)</h2>
                 </div>
 
                 <div className='flex items-center' >
@@ -263,7 +263,7 @@ export default function Home() {
 
                 <div className='flex items-center' >
                   <GiCheckMark className='text-main text-xl' />
-                  <h2 className='px-4'>Duration 1 Day (8am - 10:30pm)</h2>
+                  <h2 className='px-4'>Duration 2 Day (8am - 10:30pm)</h2>
                 </div>
 
                 <div className='flex items-center' >
