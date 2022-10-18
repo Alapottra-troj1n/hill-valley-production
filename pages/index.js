@@ -82,7 +82,7 @@ export default function Home() {
 
           {/***************** PACKAGES *****************/}
 
-          <div className='grid grid-cols-1 lg:grid-cols-3 mt-20 gap-36 px-10 lg:px-0' >
+          <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 mt-20 gap-36 px-10 lg:px-0' >
 
             {/***************** PACKAGE 1 *****************/}
 
@@ -339,7 +339,7 @@ export default function Home() {
 
         </div>
 
-        
+
         <div className='flex justify-center mt-10'><button className='bg-transparent lg:px-7 px-5 py-3 rounded-lg  font-display text-sm lg:text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >More Photos <MdArrowForwardIos className='text-sm' /></button></div>
 
 
@@ -382,7 +382,7 @@ export default function Home() {
         <div className='flex justify-center mt-20 w-full' >
           <form className='font-type mt-2 flex flex-col gap-7 text-sm' >
 
-          <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
+            <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
               <label htmlFor='clientName' >Name :</label>
               <input type="text" name="clientName" id="clientName" className="border-b border-slate-700 xl:w-96 py-1 px-2 w-[80%]" />
             </div>
