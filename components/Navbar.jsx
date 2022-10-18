@@ -30,7 +30,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="cursor-pointer text-xl relative w-[147px] h-[69px]">
-                        <Image src={'/Logo.png'} layout="fill" objectFit='cover' />
+                        <Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' />
                     </div>
                 </div>
                 <div className="navbar-end hidden lg:flex">

@@ -31,9 +31,9 @@ const Footer = () => {
             <div className="flex flex-col items-center gap-5">
                 <h2 className='text-2xl font-semibold font-display' >Stay with us</h2>
                 <div className='flex items-center gap-4' >
-                <a href='https://www.facebook.com/hillvalleyproduction' target='_blank' ><AiFillFacebook className='text-3xl cursor-pointer hover:text-main transition-all'/></a>
-                <a href='https://www.instagram.com/productionhillvalley/' target='_blank' ><AiFillYoutube className='text-4xl cursor-pointer hover:text-main transition-all' /></a>
-                <a href='https://www.youtube.com/c/HillValleyProduction' target='_blank' > <AiFillInstagram className='text-3xl cursor-pointer hover:text-main transition-all' /></a>
+                <a href='https://www.facebook.com/hillvalleyproduction' target='_blank' rel="noreferrer" ><AiFillFacebook className='text-3xl cursor-pointer hover:text-main transition-all'/></a>
+                <a href='https://www.instagram.com/productionhillvalley/' target='_blank' rel="noreferrer" ><AiFillYoutube className='text-4xl cursor-pointer hover:text-main transition-all' /></a>
+                <a href='https://www.youtube.com/c/HillValleyProduction' target='_blank' rel="noreferrer" > <AiFillInstagram className='text-3xl cursor-pointer hover:text-main transition-all' /></a>
                 </div>
             </div>
 

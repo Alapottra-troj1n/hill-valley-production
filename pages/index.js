@@ -45,24 +45,24 @@ export default function Home() {
 
           <div className='grid grid-cols-2 gap-5'>
             <div className='relative lg:h-[534px] h-[334px] w-full' >
-              <Image layout='fill' objectFit='cover' src={'/homepage1.jpg'} />
+              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage1.jpg'} />
             </div>
             <div className='relative lg:h-[534px] h-[334px] w-full' >
-              <Image layout='fill' objectFit='cover' src={'/homepage2.jpg'} />
+              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage2.jpg'} />
             </div>
           </div>
 
           <div className='relative lg:h-[634px] h-[434px] w-full' >
-            <Image layout='fill' objectFit='cover' objectPosition={'center'} src={'/homepage3.png'} />
+            <Image layout='fill' objectFit='cover' alt='homepagephoto' objectPosition={'center'} src={'/homepage3.png'} />
           </div>
 
 
           <div className='grid grid-cols-2 gap-5'>
             <div className='relative lg:h-[805px] h-[505px] w-full' >
-              <Image layout='fill' objectFit='cover' src={'/homepage4.jpg'} />
+              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage4.jpg'} />
             </div>
             <div className='relative lg:h-[805px] h-[505px] w-full' >
-              <Image layout='fill' objectFit='cover' src={'/homepage5.jpg'} />
+              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage5.jpg'} />
             </div>
           </div>
 
@@ -361,7 +361,7 @@ export default function Home() {
         <div className={styles.secondBg} >
 
           <div className='flex justify-center flex-col gap-4 items-center h-full' >
-            <Image src={'/Logo.png'} height={104} width={221} />
+            <Image alt='logo' src={'/Logo.png'} height={104} width={221} />
             <div className='flex justify-center items-center' >
 
               <button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
@@ -431,12 +431,12 @@ export default function Home() {
       <div className=' bg-white' >
         <div className='text-center' >
           <h2 className='font-display text-2xl' >Follow us on Instagram</h2>
-          <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
+          <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' rel="noreferrer" className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
 
         </div>
 
         <div className='w-full xl:h-80 h-52 lg:h-64 relative mt-16' >
-          <Image src={'/frames.jpg'} layout='fill' objectFit='cover' objectPosition='center' />
+          <Image alt='photo-frame' src={'/frames.jpg'} layout='fill' objectFit='cover' objectPosition='center' />
         </div>
       </div>
 
