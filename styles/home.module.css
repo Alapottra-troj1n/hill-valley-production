@@ -37,17 +37,17 @@
         height: 80vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: -235px  center;
+        background-position: -135px  center;
         background-attachment: local;
     }
 
     .secondBg{
         background:linear-gradient(0deg, rgba(9, 9, 9, 0.0), rgba(9, 9, 9, 0.0)), url('/4bg.jpg');
-        height: 100vh;
+        height: 80vh;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: fixed;
-        background-position: -1000px center;
+        background-attachment: local;
+        background-position: -700px center;
       
     }
 
