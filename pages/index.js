@@ -41,9 +41,9 @@ export default function Home() {
 
 
 
-        <div className='grid grid-cols-1 mt-16 gap-5 px-2 lg:px-0' >
+        <div className='grid grid-cols-1 mt-16 gap-3 lg:gap-5 px-2 lg:px-0' >
 
-          <div className='grid grid-cols-2 gap-5'>
+          <div className='grid grid-cols-2 gap-3 lg:gap-5'>
             <div className='relative lg:h-[534px] h-[154px] w-full' >
               <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage1.jpg'} />
             </div>
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
 
-          <div className='grid grid-cols-2 gap-5'>
+          <div className='grid grid-cols-2 gap-3 lg:gap-5'>
             <div className='relative lg:h-[805px] h-[255px] w-full' >
               <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage4.jpg'} />
             </div>

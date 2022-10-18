@@ -20,14 +20,16 @@ const Navbar = () => {
         <div className="absolute w-full">
             <div className="py-4 font-display font-semibold text-[16px] tracking-wide">
             <div className="navbar container mx-auto ">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden mr-4">
+                <div className="navbar-start justify-between  w-full">
+                    <div className="dropdown ">
+                       
+                       <label tabIndex={0} className="btn btn-ghost lg:hidden mr-4">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className='text-white' d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-52 gap-8 lg:text-white p-5">
                             {navLinks}
                         </ul>
+                     
                     </div>
                     <div className="cursor-pointer text-xl relative lg:w-[147px] lg:h-[69px] w-24 h-10 ">
                         <Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' />
