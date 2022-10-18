@@ -329,13 +329,13 @@ export default function Home() {
 
 
         <div className='grid grid-cols-2 gap-20' >
-          <PhotoCard img={'/couple1.png'} />
-          <PhotoCard img={'/couple2.png'} />
+          <PhotoCard img={'/couple1.png'} name={'PRITIKA & SUBHRAM'} />
+          <PhotoCard img={'/couple2.png'} name={'ALEX & ALISHA'} />
         </div>
         <div className='text-center py-20' ></div>
         <div className='grid grid-cols-2 gap-20' >
-          <PhotoCard img={'/couple3.png'} />
-          <PhotoCard img={'/couple4.png'} />
+          <PhotoCard img={'/couple3.png'} name={'JIMI & DRISTI'}  />
+          <PhotoCard img={'/couple4.png'} name={'DEEDHITI & AVI'} />
 
         </div>
 
@@ -359,8 +359,10 @@ export default function Home() {
 
         <div className={styles.secondBg} >
 
-          <div className='flex justify-center items-center h-full' >
+          <div className='flex justify-center flex-col gap-4 items-center h-full' >
+          <Image src={'/Logo.png'} height={104} width={221} />
             <div className='flex justify-center items-center' >
+             
               <button className='bg-transparent px-7 py-3 rounded-lg  font-display text-white text-lg flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
             </div>
           </div>
@@ -371,7 +373,7 @@ export default function Home() {
 
 
 
-
+      {/************* 6TH SECTION *************/}
 
       <div className='pb-20 bg-white ' >
         <h2 className='font-display text-2xl text-center' >Contact us</h2>
@@ -391,28 +393,26 @@ export default function Home() {
 
             <div className='flex items-center justify-between' >
               <label htmlFor='clientPhone' >Phone :</label>
-              <input type="tel" name="clientPhone" id="clientPhone"  className="border-b border-slate-700 w-96 py-1  px-2" />
+              <input type="tel" name="clientPhone" id="clientPhone" className="border-b border-slate-700 w-96 py-1  px-2" />
             </div>
 
             <div className='flex items-center justify-between' >
               <label htmlFor='clientAddress' >Address :</label>
-              <input type="text" name="clientAddress" id="clientAddress"  className="border-b border-slate-700 w-96 py-1  px-2" />
+              <input type="text" name="clientAddress" id="clientAddress" className="border-b border-slate-700 w-96 py-1  px-2" />
             </div>
 
             <div className='flex items-center justify-between' >
               <label htmlFor='clientDate' >Date :</label>
-              <input type="datetime-local" name="clientDate" id="clientDate"  className="border-b border-slate-700 w-96 py-1  px-2" />
+              <input type="date" name="clientDate" id="clientDate" className="border-b border-slate-700 w-96 py-1  px-2" />
             </div>
 
             <div className='flex items-start justify-between' >
               <label >Message :</label>
-              <textarea   className="border-b border-slate-700 w-96 h-48 p-2" />
-              
+              <textarea className="border-b border-slate-700 w-96 h-48 p-2" />
+
             </div>
-            
 
-         
-
+            <div className='flex justify-center mt-3'><button type='submit' className='bg-transparent px-7 py-2 rounded-md  font-display text-md flex items-center gap-2  border-2 border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >Connect </button></div>
 
           </form>
         </div>
@@ -423,6 +423,17 @@ export default function Home() {
 
 
 
+
+      {/************* 7TH SECTION *************/}
+
+
+        <div className='pb-20 bg-white' >
+            <div className='text-center' >
+            <h2 className='font-display text-2xl' >Follow us on Instagram</h2>
+            <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
+         
+            </div>
+        </div>
 
 
 
