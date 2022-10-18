@@ -38,7 +38,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: -235px  center;
-        background-attachment: fixed;
+        background-attachment: local;
     }
 
     .secondBg{
@@ -47,7 +47,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        background-position: -920px center;
+        background-position: -1000px center;
       
     }
 
