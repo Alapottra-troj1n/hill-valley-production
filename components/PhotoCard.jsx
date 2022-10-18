@@ -3,11 +3,11 @@ import React from 'react';
 
 const PhotoCard = ({img,name}) => {
     return (
-        <div  >
+        <div  className="h-full  " >
             <div className='relative h-[562px]  lg:w-full' >
                 <Image alt='logo' layout='fill' objectFit='contain' src={img} />
             </div>
-            <h2 className='font-display text-xl text-center mt-3 cursor-pointer' >{name}</h2>
+            <h2 className='font-display text-xl text-center mt-3 cursor-pointer ' >{name}</h2>
 
         </div>
     );

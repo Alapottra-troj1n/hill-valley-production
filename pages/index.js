@@ -331,13 +331,11 @@ export default function Home() {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
           <PhotoCard img={'/couple1.jpg'} name={'PRITIKA & SUBHRAM'} />
           <PhotoCard img={'/couple2.jpg'} name={'ALEX & ALISHA'} />
-        </div>
-        <div className='text-center py-20' ></div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
           <PhotoCard img={'/couple3.jpg'} name={'JIMI & DRISTI'} />
           <PhotoCard img={'/couple4.jpg'} name={'DEEDHITI & AVI'} />
-
         </div>
+     
+      
 
 
         <div className='flex justify-center mt-10'><button className='bg-transparent lg:px-7 px-5 py-3 rounded-lg  font-display text-sm lg:text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >More Photos <MdArrowForwardIos className='text-sm' /></button></div>
