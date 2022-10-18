@@ -96,7 +96,7 @@ export default function Home() {
                   <HiOutlineMinus className='text-main' />
                 </div>
 
-                <h2 className='lg:text-5xl text-4xl mt-5' > <span className='text-main' >13,000</span> BDT</h2>
+                <h2 className='lg:text-5xl text-4xl mt-5 whitespace-nowrap' > <span className='text-main' >13,000</span> BDT</h2>
 
 
               </div>
@@ -168,7 +168,7 @@ export default function Home() {
                   <HiOutlineMinus className='text-main' />
                 </div>
 
-                <h2 className='lg:text-5xl text-4xl mt-5' > <span className='text-main' >36,500</span> BDT</h2>
+                <h2 className='lg:text-5xl text-4xl mt-5 whitespace-nowrap' > <span className='text-main' >36,500</span> BDT</h2>
 
 
               </div>
@@ -238,7 +238,7 @@ export default function Home() {
 
                 <div className='flex justify-center items-center text-3xl' >
                   <HiOutlineMinus className='text-main' />
-                  <h2 className='lg:text-xl text-base mx-4 ' >THE SIGNATURE</h2>
+                  <h2 className='lg:text-xl text-base mx-4 whitespace-nowrap ' >THE SIGNATURE</h2>
                   <HiOutlineMinus className='text-main' />
                 </div>
 
