@@ -16,9 +16,12 @@ const Post = () => {
             </div>
 
             <div className='py-24 container mx-auto text-slate-500 font-normal font-type  lg:px-40  px-4'>
-                <h2 className='leading-7 text-xs lg:text-sm'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum vitae rerum ratione delectus possimus facere consequuntur ea necessitatibus provident itaque. Corrupti, voluptas debitis. Aut, recusandae modi ducimus possimus eaque voluptate aliquid quas quos laborum minus iusto temporibus ab quo vero officia asperiores necessitatibus doloribus praesentium? Molestiae totam ea, sequi veniam quibusdam unde nesciunt. Culpa perspiciatis, ipsa,  sunt unde nostrum cupiditate possimus recusandae deserunt fugiat ab porro quod dolores itaque labore maiores quam in facere adipisci hic ut cumque quidem! Dolore enim doloribus fugit possimus commodi a repellat deleniti nihil suscipit illo distinctio cupiditate, aperiam repellendus. Facere corporis deleniti blanditiis atque.</h2>
+              
+                
+             
 
                 {/*************** PHOTOS START FROM HERE ***************/}
+                <h2 className='leading-6 text-xs lg:text-sm lg:leading-7'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum vitae rerum ratione delectus possimus facere consequuntur ea necessitatibus provident itaque. Corrupti, voluptas debitis. Aut, recusandae modi ducimus possimus eaque voluptate aliquid quas quos laborum minus iusto temporibus ab quo vero officia asperiores necessitatibus doloribus praesentium? Molestiae totam ea, sequi veniam quibusdam unde nesciunt. Culpa perspiciatis, ipsa,  sunt unde nostrum cupiditate possimus</h2>
 
                 <div className="py-20 flex flex-col items-center lg:px-0" >
 
