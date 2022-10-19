@@ -28,11 +28,11 @@ const Post = () => {
 
 
                     <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img1' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
                     <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
                     {/***************** 2 COLUMNS *****************/}
@@ -40,20 +40,20 @@ const Post = () => {
                     <div className="grid grid-cols-2 gap-10">
 
                         <div className="relative lg:h-[700px] h-[400px] w-full " >
-                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img3' layout='fill' objectFit='cover' objectPosition={'center'} />
                         </div>
                         <div className="relative lg:h-[700px] h-[400px] w-full " >
-                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img4' layout='fill' objectFit='cover' objectPosition={'center'} />
                         </div>
 
                     </div>
 
                     <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img5' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
                     <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img6' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
 
@@ -62,10 +62,10 @@ const Post = () => {
                     <div className="grid grid-cols-2 gap-10">
 
                         <div className="relative lg:h-[700px] h-[400px] w-full " >
-                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img7' layout='fill' objectFit='cover' objectPosition={'center'} />
                         </div>
                         <div className="relative lg:h-[700px] h-[400px] w-full " >
-                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img8' layout='fill' objectFit='cover' objectPosition={'center'} />
                         </div>
 
                     </div>
@@ -73,11 +73,11 @@ const Post = () => {
 
 
                     <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' alt='img9' objectFit='cover' objectPosition={'center'} />
                     </div>
 
                     <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' alt='img10' objectFit='cover' objectPosition={'center'} />
                     </div>
 
 
