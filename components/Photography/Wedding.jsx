@@ -8,7 +8,7 @@ const Wedding = ({ weddingData }) => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10" >
                 {weddingData.map(data => {
 
-                    return  <LongPhotoCard data={data} />
+                    return  <LongPhotoCard key={data._id} data={data} />
 
                 })}
 
