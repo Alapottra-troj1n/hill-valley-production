@@ -36,7 +36,7 @@ const Photography = ({posts}) => {
     
 
             <div className=' relative h-[80vh] w-full'>
-                <Image priority={true} src={bg} alt='photography-bg' layout='fill' objectFit='cover' objectPosition={`${currentPage === 'wedding' ? 'center -700px' : 'center'}`}/>
+                <Image priority={true} src={bg} alt='photography-bg' layout='fill' objectFit='cover' objectPosition={'center'}/>
             </div>
 
 
@@ -60,7 +60,7 @@ const Photography = ({posts}) => {
             </div>
 
 
-            <div className='py-16 flex justify-center' >
+            <div className='py-16 flex justify-center px-10 lg:px-0' >
 
                 {currentPage === 'wedding' && <Wedding weddingData={wedding} />}
                 {currentPage === 'fashion' && <Fashion fashionData={fashion}  />}

@@ -31,8 +31,8 @@ const Navbar = () => {
                         </ul>
                      
                     </div>
-                    <div className="cursor-pointer text-xl relative lg:w-[147px] lg:h-[69px] w-24 h-10 ">
-                        <Link href={'/'} ><Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' /></Link>
+                    <div className="cursor-pointer text-xl relative right-3 lg:w-[147px] lg:h-[69px] w-24 h-10">
+                        <Link href={'/'} ><Image  alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' /></Link>
                     </div>
                 </div>
                 <div className="navbar-end hidden lg:flex">

@@ -6,6 +6,7 @@ import { GiCheckMark } from 'react-icons/gi';
 import { MdArrowForwardIos } from 'react-icons/md';
 import PhotoCard from '../components/PhotoCard';
 import connectDb from '../lib/connectDb';
+import Link from 'next/link';
 
 
 export default function Home({posts}) {
@@ -336,7 +337,7 @@ export default function Home({posts}) {
       
 
 
-        <div className='flex justify-center mt-10'><button className='bg-transparent lg:px-7 px-5 py-3 rounded-lg  font-display text-sm lg:text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >More Photos <MdArrowForwardIos className='text-sm' /></button></div>
+        <Link href={'/photography'} ><div className='flex justify-center mt-10'><button className='bg-transparent lg:px-7 px-5 py-3 rounded-lg  font-display text-sm lg:text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >More Photos <MdArrowForwardIos className='text-sm' /></button></div></Link>
 
 
 
