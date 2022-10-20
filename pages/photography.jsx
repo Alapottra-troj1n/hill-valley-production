@@ -28,7 +28,7 @@ const Photography = () => {
 
     return (
         <div>
-            <div style={{
+            <div rel="preload" style={{
                 backgroundImage: `url(${bg})`,
             }} className={`flex justify-center items-center bg-no-repeat bg-cover lg:h-[80vh] h-[50vh] ${currentPage === 'wedding' ? 'lg:bg-[center_top_-44rem] bg-center' : 'bg-center'} bg-fixed`} >
 
