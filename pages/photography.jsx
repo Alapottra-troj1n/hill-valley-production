@@ -30,7 +30,7 @@ const Photography = () => {
         <div>
             <div style={{
                 backgroundImage: `url(${bg})`,
-            }} className={`flex justify-center items-center bg-no-repeat bg-cover lg:h-[80vh] h-[50vh] ${currentPage === 'wedding' ? 'bg-[center_top_-44rem]' : 'bg-center'} bg-fixed`} >
+            }} className={`flex justify-center items-center bg-no-repeat bg-cover lg:h-[80vh] h-[50vh] ${currentPage === 'wedding' ? 'lg:bg-[center_top_-44rem] bg-center' : 'bg-center'} bg-fixed`} >
 
 
 
@@ -39,7 +39,7 @@ const Photography = () => {
 
             <div className='py-32 flex justify-center' >
 
-                <div className='grid grid-cols-3 gap-36 font-display text-xl ' >
+                <div className='grid grid-cols-3 lg:gap-36 gap-10 font-display lg:text-xl text-sm' >
                     <div className='hover:text-main text-center'>
                         <h2 onClick={() => setCurrentPage('wedding')} className={`cursor-pointer  transition-all border-b-2 ${currentPage === 'wedding' ? ' border-main' : 'border-white'}`} >WEDDING</h2>
                     </div>
