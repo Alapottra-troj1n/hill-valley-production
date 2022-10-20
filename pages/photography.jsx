@@ -33,8 +33,7 @@ const Photography = () => {
 
     }, [currentPage])
 
-    console.log(bg);
-
+ 
 
     return (
         <div>
