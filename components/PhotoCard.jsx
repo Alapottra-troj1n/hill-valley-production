@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const PhotoCard = ({data}) => {
+  
     return (
        <Link href={`post/${data._id}`}>
         <div  className="h-full cursor-pointer " >

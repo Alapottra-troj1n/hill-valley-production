@@ -1,9 +1,13 @@
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Fashion from '../components/Photography/Fashion';
 import Food from '../components/Photography/Food';
 import Wedding from '../components/Photography/Wedding';
+import connectDb from '../lib/connectDb';
 
-const Photography = () => {
+const Photography = ({posts}) => {
+
+    const {food,wedding,fashion} = posts;
 
 
     const [currentPage, setCurrentPage] = useState('wedding');
@@ -12,14 +16,6 @@ const Photography = () => {
 
 
     useEffect(() => {
-
-        // if (currentPage === 'wedding') {
-        //     setBg('https://i.ibb.co/1GYBJ0L/dfg.jpg')
-        // } else if (currentPage === 'food') {
-        //     setBg('https://i.ibb.co/Ntryhf7/food-bg.jpg')
-        // } else if (currentPage === 'fashion'){
-        //     setBg('https://i.ibb.co/Smc8Cf7/fashion-bg.jpg')
-        // }
 
         if (currentPage === 'wedding') {
             setBg('/photography/wedding.jpg')
@@ -37,13 +33,13 @@ const Photography = () => {
 
     return (
         <div>
-            <div rel="preload" style={{
-                backgroundImage: `url(${bg})`,
-            }} className={`flex justify-center items-center bg-no-repeat bg-cover lg:h-[80vh] h-[50vh] ${currentPage === 'wedding' ? 'lg:bg-[center_top_-44rem] bg-center' : 'bg-center'} bg-fixed`} >
+    
 
-
-
+            <div className=' relative h-[80vh] w-full'>
+                <Image priority={true} src={bg} alt='photography-bg' layout='fill' objectFit='cover' objectPosition={`${currentPage === 'wedding' ? 'center -700px' : 'center'}`}/>
             </div>
+
+
 
 
             <div className='py-32 flex justify-center' >
@@ -66,9 +62,9 @@ const Photography = () => {
 
             <div className='py-16 flex justify-center' >
 
-                {currentPage === 'wedding' && <Wedding />}
-                {currentPage === 'fashion' && <Fashion />}
-                {currentPage === 'food' && <Food />}
+                {currentPage === 'wedding' && <Wedding weddingData={wedding} />}
+                {currentPage === 'fashion' && <Fashion fashionData={fashion}  />}
+                {currentPage === 'food' && <Food foodData={food}  />}
 
             </div>
 
@@ -78,3 +74,24 @@ const Photography = () => {
 };
 
 export default Photography;
+
+
+
+
+
+export async function getStaticProps(context) {
+
+
+    const db = await connectDb();
+    const wedding = await db.collection("posts").find({category: 'wedding'}).limit(4).toArray();
+    const food = await db.collection("posts").find({category: 'food'}).limit(4).toArray();
+    const fashion = await db.collection("posts").find({category: 'fashion'}).limit(4).toArray();
+   
+  
+  
+  
+    return {
+      props: { posts: JSON.parse(JSON.stringify({wedding, fashion, food})) },
+      revalidate: 60, 
+    }
+  }
