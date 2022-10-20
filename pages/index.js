@@ -26,7 +26,7 @@ export default function Home() {
       {/*******  HERO SECTION *************/}
 
 
-      <div className={styles.homeBg} >
+      <div rel="preload" className={styles.homeBg} >
 
       </div>
 

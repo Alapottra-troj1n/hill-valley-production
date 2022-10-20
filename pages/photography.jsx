@@ -8,15 +8,25 @@ const Photography = () => {
 
     const [currentPage, setCurrentPage] = useState('wedding');
 
-    const [bg, setBg] = useState('https://i.ibb.co/1GYBJ0L/dfg.jpg');
+    const [bg, setBg] = useState('/photography/fashion.jpg');
 
 
     useEffect(() => {
 
+        // if (currentPage === 'wedding') {
+        //     setBg('https://i.ibb.co/1GYBJ0L/dfg.jpg')
+        // } else if (currentPage === 'food') {
+        //     setBg('https://i.ibb.co/Ntryhf7/food-bg.jpg')
+        // } else if (currentPage === 'fashion'){
+        //     setBg('https://i.ibb.co/Smc8Cf7/fashion-bg.jpg')
+        // }
+
         if (currentPage === 'wedding') {
-            setBg('https://i.ibb.co/1GYBJ0L/dfg.jpg')
+            setBg('/photography/wedding.jpg')
         } else if (currentPage === 'food') {
-            setBg('https://i.ibb.co/Ntryhf7/food-bg.jpg')
+            setBg('/photography/food.jpg')
+        } else if (currentPage === 'fashion'){
+            setBg('/photography/fashion.jpg')
         }
 
 
