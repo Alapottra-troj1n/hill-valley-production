@@ -92,6 +92,6 @@ export async function getStaticProps(context) {
   
     return {
       props: { posts: JSON.parse(JSON.stringify({wedding, fashion, food})) },
-      revalidate: 60, 
+      revalidate: 7200, 
     }
   }

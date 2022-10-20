@@ -178,6 +178,6 @@ export async function getStaticProps(context) {
     return {
         props: { data: JSON.parse(JSON.stringify(post)) },
         // will be passed to the page component as props
-        revalidate: 18000,
+        revalidate: 7200,
     }
 }
