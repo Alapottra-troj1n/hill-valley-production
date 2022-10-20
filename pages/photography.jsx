@@ -83,9 +83,9 @@ export async function getStaticProps(context) {
 
 
     const db = await connectDb();
-    const wedding = await db.collection("posts").find({category: 'wedding'}).limit(4).toArray();
-    const food = await db.collection("posts").find({category: 'food'}).limit(4).toArray();
-    const fashion = await db.collection("posts").find({category: 'fashion'}).limit(4).toArray();
+    const wedding = await db.collection("posts").find({category: 'wedding'}).limit(6).toArray();
+    const food = await db.collection("posts").find({category: 'food'}).limit(6).toArray();
+    const fashion = await db.collection("posts").find({category: 'fashion'}).limit(6).toArray();
    
   
   

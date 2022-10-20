@@ -1,19 +1,24 @@
 import Image from 'next/image';
 import React from 'react';
+import connectDb from '../../lib/connectDb';
+const { ObjectId } = require("mongodb");
+import { isMobile } from 'react-device-detect';
 
-
-const Post = () => {
-
+const Post = ({ data }) => {
 
 
 
     return (
         <div className="text-white " >
-            <div className="flex justify-center items-center bg-[url('https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg')] bg-no-repeat bg-cover bg-bottom bg-black lg:h-[80vh] h-[50vh] bg-fixed" >
+            {isMobile ? <div  style={{ backgroundImage: `url(${data[0]["mobile cover"]})` }} className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[70vh] bg-fixed`} >
 
                 <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >MEGHNA & KARAN</h2>
 
-            </div>
+            </div> : <div style={{ backgroundImage: `url(${data[0].coverphoto})` }}  className={`flex justify-center items-center bg-no-repeat bg-cover bg-bottom lg:h-[80vh] h-[50vh] bg-fixed`} >
+
+                <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >MEGHNA & KARAN</h2>
+
+            </div>}
 
             <div className='py-24 container mx-auto text-slate-500 font-normal font-type  lg:px-40  px-4'>
 
@@ -27,33 +32,33 @@ const Post = () => {
 
 
 
-                    <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img1' layout='fill' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full " >
+                        <Image src={data[0].img1} alt='img1' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
-                    <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full " >
+                        <Image src={data[0].img2} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
                     {/***************** 2 COLUMNS *****************/}
 
                     <div className="grid grid-cols-2 gap-10">
 
-                        <div className="relative lg:h-[700px] h-[400px] w-full " >
-                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img3' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <div className="relative lg:h-[700px] h-[200px] w-full " >
+                            <Image src={data[0].img3} alt='img3' layout='fill' objectFit='cover' objectPosition={'center'} />
                         </div>
-                        <div className="relative lg:h-[700px] h-[400px] w-full " >
-                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img4' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <div className="relative lg:h-[700px] h-[200px] w-full " >
+                            <Image src={data[0].img4} alt='img4' layout='fill' objectFit='cover' objectPosition={'center'} />
                         </div>
 
                     </div>
 
-                    <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img5' layout='fill' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full " >
+                        <Image src={data[0].img5} alt='img5' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
-                    <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img6' layout='fill' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full " >
+                        <Image src={data[0].img6} alt='img6' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
 
@@ -61,23 +66,23 @@ const Post = () => {
 
                     <div className="grid grid-cols-2 gap-10">
 
-                        <div className="relative lg:h-[700px] h-[400px] w-full " >
-                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img7' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <div className="relative lg:h-[700px] h-[200px] w-full " >
+                            <Image src={data[0].img7} alt='img7' layout='fill' objectFit='cover' objectPosition={'center'} />
                         </div>
-                        <div className="relative lg:h-[700px] h-[400px] w-full " >
-                            <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' alt='img8' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <div className="relative lg:h-[700px] h-[200px] w-full " >
+                            <Image src={data[0].img8} alt='img8' layout='fill' objectFit='cover' objectPosition={'center'} />
                         </div>
 
                     </div>
 
 
 
-                    <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' alt='img9' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full " >
+                        <Image src={data[0].img9} layout='fill' alt='img9' objectFit='cover' objectPosition={'center'} />
                     </div>
 
-                    <div className="relative lg:h-[700px] h-[400px] w-full " >
-                        <Image src='https://i.ibb.co/nCQbXL2/74387413-2447623832174963-8578973925654921216-n-1.jpg' layout='fill' alt='img10' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full " >
+                        <Image src={data[0].img10} layout='fill' alt='img10' objectFit='cover' objectPosition={'center'} />
                     </div>
 
 
@@ -113,3 +118,66 @@ const Post = () => {
 };
 
 export default Post;
+
+
+
+
+
+export async function getStaticPaths() {
+    const db = await connectDb();
+    const allPosts = await db.collection('posts').find({}).toArray();
+
+    const paths = allPosts.map(post => {
+        return {
+            params: {
+                id: post._id.toString()
+            }
+        }
+    })
+
+
+
+
+
+    return {
+        paths,
+        fallback: 'blocking', // can also be true or 'blocking'
+
+
+
+    }
+}
+
+
+
+
+
+export async function getStaticProps(context) {
+
+
+
+    const { id } = context.params;
+
+
+
+    const db = await connectDb();
+    const post = await db.collection('posts').find({ _id: ObjectId(id) }).toArray();
+
+
+
+
+    if (!post) {
+        return {
+            notFound: true,
+        };
+    }
+
+
+
+
+    return {
+        props: { data: JSON.parse(JSON.stringify(post)) },
+        // will be passed to the page component as props
+        revalidate: 18000,
+    }
+}
