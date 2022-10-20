@@ -4,6 +4,9 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['i.ibb.co'],
+  },
+  experimental: {
+    scrollRestoration: true,
   }
 }
 

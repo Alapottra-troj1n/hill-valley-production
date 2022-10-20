@@ -5,9 +5,10 @@ import { HiOutlineMinus } from 'react-icons/hi';
 import { GiCheckMark } from 'react-icons/gi';
 import { MdArrowForwardIos } from 'react-icons/md';
 import PhotoCard from '../components/PhotoCard';
+import connectDb from '../lib/connectDb';
 
 
-export default function Home() {
+export default function Home({posts}) {
 
 
 
@@ -26,7 +27,7 @@ export default function Home() {
       {/*******  HERO SECTION *************/}
 
 
-      <div rel="preload" className={styles.homeBg} >
+      <div className={styles.homeBg} >
 
       </div>
 
@@ -329,10 +330,7 @@ export default function Home() {
 
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
-          <PhotoCard img={'/couple1.jpg'} name={'PRITIKA & SUBHRAM'} />
-          <PhotoCard img={'/couple2.jpg'} name={'ALEX & ALISHA'} />
-          <PhotoCard img={'/couple3.jpg'} name={'JIMI & DRISTI'} />
-          <PhotoCard img={'/couple4.jpg'} name={'DEEDHITI & AVI'} />
+          {posts.map(post => <PhotoCard key={post._id} data={post} /> )}
         </div>
      
       
@@ -453,4 +451,20 @@ export default function Home() {
 
 
   )
+}
+
+
+
+export async function getStaticProps(context) {
+
+
+  const db = await connectDb();
+  const allPosts = await db.collection("posts").find({}).limit(4).toArray();
+
+
+
+  return {
+    props: { posts: JSON.parse(JSON.stringify(allPosts)) },
+    revalidate: 60, 
+  }
 }

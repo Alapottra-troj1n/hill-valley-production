@@ -1,15 +1,18 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
-const PhotoCard = ({img,name}) => {
+const PhotoCard = ({data}) => {
     return (
-        <div  className="h-full  " >
+       <Link href={`post/${data._id}`}>
+        <div  className="h-full cursor-pointer " >
             <div className='relative lg:h-[562px] h-[320px]  lg:w-full' >
-                <Image alt='logo' layout='fill' objectFit='contain' src={img} />
+                <Image alt='logo' layout='fill' objectFit='contain' src={data?.img1} />
             </div>
-            <h2 className='font-display text-xl text-center mt-3 cursor-pointer ' >{name}</h2>
+            <h2 className='font-display text-xl text-center mt-3  hover:text-main transition-all' >{data.title}</h2>
 
         </div>
+       </Link>
     );
 };
 
