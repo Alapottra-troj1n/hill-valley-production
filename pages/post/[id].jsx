@@ -12,11 +12,11 @@ const Post = ({ data }) => {
         <div className="text-white " >
             {isMobile ? <div  style={{ backgroundImage: `url(${data[0]["mobile cover"]})` }} className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[70vh] bg-fixed`} >
 
-                <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >MEGHNA & KARAN</h2>
+                <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >{data[0].title}</h2>
 
             </div> : <div style={{ backgroundImage: `url(${data[0].coverphoto})` }}  className={`flex justify-center items-center bg-no-repeat bg-cover bg-bottom lg:h-[80vh] h-[50vh] bg-fixed`} >
 
-                <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >MEGHNA & KARAN</h2>
+                <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >{data[0].title}</h2>
 
             </div>}
 
@@ -26,7 +26,7 @@ const Post = ({ data }) => {
 
 
                 {/*************** PHOTOS START FROM HERE ***************/}
-                <h2 className='leading-6 text-xs lg:text-sm lg:leading-7'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum vitae rerum ratione delectus possimus facere consequuntur ea necessitatibus provident itaque. Corrupti, voluptas debitis. Aut, recusandae modi ducimus possimus eaque voluptate aliquid quas quos laborum minus iusto temporibus ab quo vero officia asperiores necessitatibus doloribus praesentium? Molestiae totam ea, sequi veniam quibusdam unde nesciunt. Culpa perspiciatis, ipsa,  sunt unde nostrum cupiditate possimus</h2>
+                <h2 className='leading-6 text-xs lg:text-sm lg:leading-7'>{data[0]?.story ? data[0].story : ''}</h2>
 
                 <div className="py-20 grid grid-cols-1 lg:px-0 gap-10" >
 
