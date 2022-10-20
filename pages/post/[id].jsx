@@ -14,7 +14,7 @@ const Post = ({ data }) => {
 
                 <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >{data[0].title}</h2>
 
-            </div> : <div style={{ backgroundImage: `url(${data[0].coverphoto})` }}  className={`flex justify-center items-center bg-no-repeat bg-cover bg-bottom lg:h-[80vh] h-[50vh] bg-fixed`} >
+            </div> : <div style={{ backgroundImage: `url(${data[0].coverphoto})` }}  className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[50vh] bg-fixed`} >
 
                 <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >{data[0].title}</h2>
 
