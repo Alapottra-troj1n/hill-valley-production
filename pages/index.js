@@ -34,7 +34,7 @@ export default function Home({posts}) {
 
       {/*******  2ND SECTION *************/}
 
-      <div className='py-20 px-1 lg:px-32 bg-white container mx-auto  font-type '>
+      <div className='py-20 px-1 lg:px-32 bg-slate-200 container mx-auto  font-type '>
 
         <h2 className='font-extra text-center text-3xl lg:text-5xl' >The Art of Making Memories Tangible</h2>
         <div className='border-b-2 mt-7 w-[50%] mx-auto border-main' ></div>
