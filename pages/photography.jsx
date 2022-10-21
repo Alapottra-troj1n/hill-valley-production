@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 import Fashion from '../components/Photography/Fashion';
 import Food from '../components/Photography/Food';
 import Wedding from '../components/Photography/Wedding';
@@ -12,16 +13,19 @@ const Photography = ({posts}) => {
 
     const [currentPage, setCurrentPage] = useState('wedding');
 
-    const [bg, setBg] = useState('/photography/fashion.jpg');
+    const [bg, setBg] = useState('/photography/wedding.jpg');
 
 
     useEffect(() => {
 
         if (currentPage === 'wedding') {
             setBg('/photography/wedding.jpg')
-        } else if (currentPage === 'food') {
+        } else if (currentPage === 'food' && isMobile) {
             setBg('/photography/food.jpg')
-        } else if (currentPage === 'fashion'){
+        }else if (currentPage === 'food' && !isMobile) {
+            setBg('/photography/foodpc.jpg')
+        }
+        else if (currentPage === 'fashion'){
             setBg('/photography/fashion.jpg')
         }
 
@@ -42,7 +46,7 @@ const Photography = ({posts}) => {
 
 
 
-            <div className='py-32 flex justify-center' >
+            <div className='py-32  flex justify-center' >
 
                 <div className='grid grid-cols-3 lg:gap-36 gap-10 font-display lg:text-xl text-sm' >
                     <div className='hover:text-main text-center'>
