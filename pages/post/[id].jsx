@@ -10,11 +10,11 @@ const Post = ({ data }) => {
 
     return (
         <div className="text-white " >
-            {isMobile ? <div  style={{ backgroundImage: `url(${data[0]["mobile cover"]})` }} className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[70vh] bg-fixed`} >
+            {isMobile ? <div rel='preload' style={{ backgroundImage: `url(${data[0]["mobile cover"]})` }} className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[70vh] bg-fixed bg-slate-200`} >
 
                 <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >{data[0].title}</h2>
 
-            </div> : <div style={{ backgroundImage: `url(${data[0].coverphoto})` }}  className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[50vh] bg-fixed`} >
+            </div> : <div rel='preload' style={{ backgroundImage: `url(${data[0].coverphoto})` }} className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[50vh] bg-fixed bg-slate-200`} >
 
                 <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >{data[0].title}</h2>
 

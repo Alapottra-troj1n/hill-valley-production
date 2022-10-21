@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const navLinks = <>
     <Link href={'/photography'} ><li className='cursor-pointer hover:text-main_light transition-all' >PHOTOGRAPHY</li></Link>
-        <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >FILMS</li></Link>
+        <Link href={'/films'} ><li className='cursor-pointer hover:text-main_light transition-all' >FILMS</li></Link>
         <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >PACKAGES</li></Link>
         <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >QUESTIONS</li></Link>
         <Link href={'/'} ><li className='cursor-pointer hover:text-main_light transition-all' >CONTACT</li></Link>
