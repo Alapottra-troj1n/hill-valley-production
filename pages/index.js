@@ -9,7 +9,7 @@ import connectDb from '../lib/connectDb';
 import Link from 'next/link';
 
 
-export default function Home({posts}) {
+export default function Home({ posts }) {
 
 
 
@@ -28,13 +28,15 @@ export default function Home({posts}) {
       {/*******  HERO SECTION *************/}
 
 
-      <div className={styles.homeBg} >
+      <div className="bg-slate-300" >
+        <div className={styles.homeBg} >
 
+        </div>
       </div>
 
       {/*******  2ND SECTION *************/}
 
-      <div className='py-20 px-1 lg:px-32 bg-slate-200 container mx-auto  font-type '>
+      <div className='py-20 px-1 lg:px-32 container mx-auto  font-type '>
 
         <h2 className='font-extra text-center text-3xl lg:text-5xl' >The Art of Making Memories Tangible</h2>
         <div className='border-b-2 mt-7 w-[50%] mx-auto border-main' ></div>
@@ -331,10 +333,10 @@ export default function Home({posts}) {
 
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
-          {posts.map(post => <PhotoCard key={post._id} data={post} /> )}
+          {posts.map(post => <PhotoCard key={post._id} data={post} />)}
         </div>
-     
-      
+
+
 
 
         <Link href={'/photography'} ><div className='flex justify-center mt-10'><button className='bg-transparent lg:px-7 px-5 py-3 rounded-lg  font-display text-sm lg:text-lg flex items-center gap-2  border-[1px] border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >More Photos <MdArrowForwardIos className='text-sm' /></button></div></Link>
@@ -466,6 +468,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { posts: JSON.parse(JSON.stringify(allPosts)) },
-    revalidate: 7200, 
+    revalidate: 7200,
   }
 }

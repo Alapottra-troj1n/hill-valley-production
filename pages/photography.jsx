@@ -39,7 +39,7 @@ const Photography = ({posts}) => {
         <div>
     
 
-            <div className=' relative h-[80vh] w-full'>
+            <div className='bg-slate-300 relative h-[80vh] w-full'>
                 <Image priority={true} src={bg} alt='photography-bg' layout='fill' objectFit='cover' objectPosition={'center'}/>
             </div>
 
