@@ -28,11 +28,11 @@ export default function Home({ posts }) {
       {/*******  HERO SECTION *************/}
 
 
-      <div className="bg-slate-300" >
+   
         <div className={styles.homeBg} >
 
         </div>
-      </div>
+     
 
       {/*******  2ND SECTION *************/}
 
