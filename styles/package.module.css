@@ -1,0 +1,25 @@
+.packageBg{
+    background:linear-gradient(0deg, rgba(9, 9, 9, 0), rgba(9, 9, 9, 0)), url('/packagesBg.jpg');
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+
+@media screen and (max-width: 667px){
+
+    .packageBg{
+        background:linear-gradient(0deg, rgba(9, 9, 9, 0), rgba(9, 9, 9, 0)), url('/packagesBg.jpg');
+        height: 80vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -350px  center;
+        background-attachment: fixed;
+    }
+
+ 
+
+}

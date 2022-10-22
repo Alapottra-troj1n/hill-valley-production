@@ -9,7 +9,7 @@ import connectDb from '../lib/connectDb';
 import Link from 'next/link';
 
 
-export default function Home({ posts }) {
+export default function Home({ posts,packages }) {
 
 
 
@@ -81,7 +81,7 @@ export default function Home({ posts }) {
 
       <div className='py-20 bg-sky-50/50' >
         <div className='container mx-auto ' >
-          <h2 className='font-display text-center lg:text-3xl text-2xl  font-semibold' >OUR PACKAGES</h2>
+          <h2 className='font-display text-center lg:text-3xl text-2xl  font-semibold'>BEST COMBO PACKAGES</h2>
 
 
           {/***************** PACKAGES *****************/}
@@ -463,11 +463,12 @@ export async function getStaticProps(context) {
 
   const db = await connectDb();
   const allPosts = await db.collection("posts").find({}).limit(4).toArray();
+  const comboPackages = await db.collection("packages").find({packageCategory : "comboPackage"}).toArray();
 
 
 
   return {
-    props: { posts: JSON.parse(JSON.stringify(allPosts)) },
+    props: { posts: JSON.parse(JSON.stringify(allPosts)),packages: JSON.parse(JSON.stringify(comboPackages)) },
     revalidate: 7200,
   }
 }
