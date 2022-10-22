@@ -93,9 +93,9 @@ export default function Home({ posts,packages }) {
 
       {/************* 4TH SECTION *************/}
 
-      <div className='py-20 bg-white container mx-auto px-4 lg:px-0'>
+      <div className='pb-20 bg-white container mx-auto px-4 lg:px-0'>
 
-
+      <h2 className='text-center pt-20 pb-7 text-4xl font-display' >Recent Photoshoots</h2>
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
           {posts.map(post => <PhotoCard key={post._id} data={post} />)}
@@ -130,7 +130,8 @@ export default function Home({ posts,packages }) {
             </div>
             <div className='flex justify-center items-center' >
 
-              <button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
+              <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button></Link>
+              
             </div>
           </div>
 

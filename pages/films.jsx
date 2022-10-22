@@ -16,7 +16,7 @@ const Flims = () => {
                     </svg>
                     <span class="sr-only">Loading...</span>
                 </div>
-                <video className='w-full h-full object-cover absolute z-20' autoPlay loop>
+                <video className='w-full h-full object-cover absolute z-20' autoPlay loop muted>
                     <source src="/video/video1.mp4" type="video/mp4" />
                 </video>
 
@@ -25,7 +25,9 @@ const Flims = () => {
 
 
             <div className='container mx-auto '>
-                <div className="py-32 grid grid-cols-1 lg:grid-cols-3 gap-10 px-6">
+                <h2 className='text-center py-24 text-4xl font-display' >Featured Films</h2>
+             <div>
+             <div className="pb-32 grid grid-cols-1 lg:grid-cols-3 gap-10 px-6">
                     <div className="w-full lg:h-96 h-72">
                         <iframe className="w-full h-full" src="https://www.youtube.com/embed/E-2XF3sTuyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
@@ -45,6 +47,7 @@ const Flims = () => {
                         <iframe className="w-full h-full" src="https://www.youtube.com/embed/LviLU7Fwuw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
+             </div>
             </div>
 
         </div>
