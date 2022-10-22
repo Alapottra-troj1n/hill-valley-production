@@ -4,13 +4,15 @@ import PhotoPackages from '../components/PhotoPackages/PhotoPackages'
 import connectDb from '../lib/connectDb';
 import ComboPackages from '../components/PhotoPackages/ComboPackage';
 
-const Packages = ({photoPackages,comboPackages}) => {
+const Packages = ({ photoPackages, comboPackages }) => {
     const [currentPage, setCurrentPage] = useState('photo');
 
     return (
         <div>
-            <div className={styles.packageBg} >
+            <div className="bg-slate-300" >
+                <div className={styles.packageBg} >
 
+                </div>
             </div>
 
 
@@ -29,8 +31,8 @@ const Packages = ({photoPackages,comboPackages}) => {
             </div>
 
             <div className='bg-sky-50' >
-            {currentPage === 'photo' && <PhotoPackages packages={photoPackages} />}
-            {currentPage === 'combo' && <ComboPackages packages={comboPackages} />}
+                {currentPage === 'photo' && <PhotoPackages packages={photoPackages} />}
+                {currentPage === 'combo' && <ComboPackages packages={comboPackages} />}
             </div>
 
 
@@ -45,13 +47,13 @@ export async function getStaticProps(context) {
 
 
     const db = await connectDb();
-    const photoPackages = await db.collection("packages").find({packageCategory : "photoPackage"}).toArray();
-    const comboPackages = await db.collection("packages").find({packageCategory : "comboPackage"}).toArray();
-  
-  
-  
+    const photoPackages = await db.collection("packages").find({ packageCategory: "photoPackage" }).toArray();
+    const comboPackages = await db.collection("packages").find({ packageCategory: "comboPackage" }).toArray();
+
+
+
     return {
-      props: { photoPackages: JSON.parse(JSON.stringify(photoPackages)),comboPackages: JSON.parse(JSON.stringify(comboPackages)) },
-      revalidate: 7200,
+        props: { photoPackages: JSON.parse(JSON.stringify(photoPackages)), comboPackages: JSON.parse(JSON.stringify(comboPackages)) },
+        revalidate: 7200,
     }
-  }
+}
