@@ -8,7 +8,7 @@ const Flims = () => {
     return (
         <div  >
 
-            <div className='relative lg:h-[60vh] h-[20vh] w-full bg-black '>
+            <div className='relative lg:h-[80vh] h-[20vh] w-full bg-black '>
                 <div className='z-10  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' role="status">
                     <svg aria-hidden="true" className="mr-2 lg:w-16 lg:h-16 h-4 w-4 text-gray-200 animate-spin dark:text-gray-600 fill-main" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor" />
@@ -34,6 +34,15 @@ const Flims = () => {
                     </div>
                     <div className="w-full lg:h-96 h-72">
                         <iframe className="w-full h-full" src="https://www.youtube.com/embed/oIhD1_t4JO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div className="w-full lg:h-96 h-72">
+                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/CNU1AP-nHOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div className="w-full lg:h-96 h-72">
+                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/1KTuT1OVh8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div className="w-full lg:h-96 h-72">
+                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/LviLU7Fwuw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

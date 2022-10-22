@@ -1,6 +1,7 @@
 import React from 'react';
 import { HiOutlineMinus } from 'react-icons/hi';
 import { GiCheckMark } from 'react-icons/gi';
+import Link from 'next/link';
 
 const Package = ({ pack }) => {
 
@@ -41,7 +42,7 @@ const Package = ({ pack }) => {
 
             <div className='mt-9 text-center font-display '>
 
-                <button className='lg:px-10 px-5 lg:py-3 py-2 text-sm lg:text-xl  border-2 border-main rounded-md hover:bg-main hover:text-white transition-all' >Get Started</button>
+                <Link href={'/contact'} ><button className='lg:px-10 px-5 lg:py-3 py-2 text-sm lg:text-xl  border-2 border-main rounded-md hover:bg-main hover:text-white transition-all' >Contact</button></Link>
 
             </div>
 
