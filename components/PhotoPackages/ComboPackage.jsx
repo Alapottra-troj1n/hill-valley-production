@@ -2,6 +2,7 @@ import React from 'react';
 import Package from '../Package';
 
 const ComboPackages = ({packages}) => {
+   
     return (
         <div className=" container mx-auto " >
             <div>
@@ -9,7 +10,11 @@ const ComboPackages = ({packages}) => {
              <h2 className="text-center text-4xl font-display font-semibold border-b-2 pb-2 border-main inline-block" >ONE DAY</h2>
             </div>   
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-10 lg:gap-20 pb-10">
-                {packages.map(pack => <Package key={pack._id} pack={pack} /> )}
+                {packages.map(pack => {
+                    if(pack.duration === 'oneDay'){
+                        return <Package key={pack._id} pack={pack} /> 
+                    }
+                })}
             </div>
             </div>
    
@@ -18,7 +23,11 @@ const ComboPackages = ({packages}) => {
              <h2 className="text-center text-4xl font-display font-semibold border-b-2 pb-2 border-main inline-block" >TWO DAYS </h2>
             </div>   
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-10 lg:gap-20 pb-10">
-                {packages.map(pack => <Package key={pack._id} pack={pack} /> )}
+                {packages.map(pack => {
+                    if(pack.duration === 'twoDay'){
+                       return <Package key={pack._id} pack={pack} />
+                    }
+                } )}
             </div>
             </div>
 

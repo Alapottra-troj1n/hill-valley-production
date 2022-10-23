@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const Package = ({ pack }) => {
 
-    console.log(pack);
+   
 
     return (
         <div className='flex flex-col justify-between bg-white p-12 shadow-sm' >
