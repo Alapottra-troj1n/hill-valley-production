@@ -150,17 +150,7 @@ export default function Home({ posts,packages }) {
       {/************* 7TH SECTION *************/}
 
 
-      <div className=' bg-white' >
-        <div className='text-center' >
-          <h2 className='font-display text-2xl' >Follow us on Instagram</h2>
-          <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' rel="noreferrer" className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
-
-        </div>
-
-        <div className='w-full xl:h-80  h-44 relative mt-16' >
-          <Image alt='photo-frame' src={'/frames.jpg'} layout='fill' objectFit='cover' objectPosition='center' />
-        </div>
-      </div>
+   
 
 
 

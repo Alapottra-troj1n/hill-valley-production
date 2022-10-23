@@ -14,6 +14,11 @@ function MyApp({ Component, pageProps }) {
     <>
       <Navbar />
       <Component {...pageProps} />
+      <MessengerChat
+      language='en_US'
+      pageId='100044432706390'
+      
+      />
       <Footer/>
     </>)
 }
