@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <>
             <div className=' bg-white' >
-                <div className='text-center' >
+                <div className='text-center mt-16' >
                     <h2 className='font-display text-2xl' >Follow us on Instagram</h2>
                     <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' rel="noreferrer" className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
 
