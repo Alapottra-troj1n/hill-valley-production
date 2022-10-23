@@ -6,7 +6,6 @@ import PhotoCard from '../components/PhotoCard';
 import connectDb from '../lib/connectDb';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
-import Facebook from '../components/Facebook';
 
 
 
@@ -150,7 +149,7 @@ export default function Home({ posts }) {
 
 
      {/* '100044432706390' */}
-     <Facebook/>
+
       
      
 
