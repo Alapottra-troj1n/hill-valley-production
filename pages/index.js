@@ -8,6 +8,7 @@ import PhotoCard from '../components/PhotoCard';
 import connectDb from '../lib/connectDb';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
+import { MessengerChat } from 'react-messenger-chat-plugin';
 
 
 export default function Home({ posts,packages }) {
@@ -150,7 +151,11 @@ export default function Home({ posts,packages }) {
       {/************* 7TH SECTION *************/}
 
 
-   
+      <MessengerChat
+      language='en_US'
+      pageId='100044432706390'
+      
+      />
 
 
 
