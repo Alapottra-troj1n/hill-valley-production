@@ -28,9 +28,11 @@ export default function Home({ posts }) {
 
 
    
-        <div className={styles.homeBg} >
+      <div className="text-slate-200" >
+      <div className={styles.homeBg} >
 
-        </div>
+</div>
+      </div>
      
 
       {/*******  2ND SECTION *************/}
