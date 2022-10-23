@@ -16,7 +16,7 @@
     "react-device-detect": "^2.2.2",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "react-messenger-chat-plugin": "^3.0.5"
+    "react-messenger-customer-chat": "^0.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

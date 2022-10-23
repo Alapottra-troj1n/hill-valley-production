@@ -1,18 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/home.module.css'
-import { HiOutlineMinus } from 'react-icons/hi';
-import { GiCheckMark } from 'react-icons/gi';
 import { MdArrowForwardIos } from 'react-icons/md';
 import PhotoCard from '../components/PhotoCard';
 import connectDb from '../lib/connectDb';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
-import { MessengerChat } from 'react-messenger-chat-plugin';
 
 
-export default function Home({ posts,packages }) {
 
+export default function Home({ posts }) {
 
 
 
@@ -151,11 +148,9 @@ export default function Home({ posts,packages }) {
       {/************* 7TH SECTION *************/}
 
 
-      <MessengerChat
-      language='en_US'
-      pageId='100044432706390'
+     {/* '100044432706390' */}
       
-      />
+     
 
 
 
@@ -179,12 +174,11 @@ export async function getStaticProps(context) {
 
   const db = await connectDb();
   const allPosts = await db.collection("posts").find({}).limit(4).toArray();
-  const comboPackages = await db.collection("packages").find({packageCategory : "comboPackage"}).toArray();
 
 
 
   return {
-    props: { posts: JSON.parse(JSON.stringify(allPosts)),packages: JSON.parse(JSON.stringify(comboPackages)) },
+    props: { posts: JSON.parse(JSON.stringify(allPosts))},
     revalidate: 7200,
   }
 }
