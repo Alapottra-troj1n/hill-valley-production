@@ -16,11 +16,15 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Navbar />
-      <MessengerCustomerChat
-          pageId={"100044432706390"}
-          appId={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID}        
-          xfbml={true}
-        />
+     {
+      typeof window !== 'undefined' && (
+        <MessengerCustomerChat
+        pageId={"100044432706390"}
+        appId={process.env.NEXT_PUBLIC_FACEBOOK_APP_ID}        
+        xfbml={true}
+      />
+      )
+     }
       <Component {...pageProps} />
       <Footer />
     </>)
