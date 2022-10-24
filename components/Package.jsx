@@ -2,7 +2,7 @@ import React from 'react';
 import { HiOutlineMinus } from 'react-icons/hi';
 import { GiCheckMark } from 'react-icons/gi';
 import Link from 'next/link';
-
+import { v4 as uuidv4 } from 'uuid';
 const Package = ({ pack }) => {
 
    
@@ -29,7 +29,7 @@ const Package = ({ pack }) => {
 
                     return (
                         <>
-                            <div className='flex items-center' >
+                            <div key={uuidv4()} className='flex items-center' >
                                 <GiCheckMark className='text-main text-xl' />
                                 <h2 className='px-4'>{list}</h2>
                             </div>
