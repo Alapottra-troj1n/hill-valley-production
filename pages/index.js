@@ -80,11 +80,7 @@ export default function Home({ posts }) {
 
 
 
-      <div className='py-20 bg-sky-50/50' >
-       
-
-
-      </div>
+  
 
 
 
