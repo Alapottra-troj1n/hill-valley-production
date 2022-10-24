@@ -1,9 +1,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
+
+    const [bgChange, setBgChance] = useState(false);
+   
+    useEffect(()=>{
+
+        const changeNavbar = () => {
+
+            if(window.scrollY >= 790){
+                setBgChance(true);
+            }else if (window.scrollY <= 550 ){
+                setBgChance(false);
+            }
+
+        }
+
+        window.addEventListener('scroll',changeNavbar );
+
+
+        return () => {
+            window.removeEventListener("scroll", changeNavbar);
+          }
+
+    },[])
 
     const router = useRouter();
 
@@ -22,8 +45,8 @@ const Navbar = () => {
 
 
     return (
-        <div className="absolute w-full z-50">
-            <div className="py-4 font-display font-semibold text-[16px] tracking-wide">
+        <div className={`fixed ${bgChange ? 'bg-slate-500' : ''} w-full z-50 transition-all`}>
+            <div className="py-2 font-display font-semibold text-[16px] tracking-wide">
                 <div className="navbar container mx-auto ">
                     <div className="lg:navbar-start justify-between  w-full">
                         <div className="dropdown ">
