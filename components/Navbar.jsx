@@ -45,7 +45,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`fixed ${bgChange ? 'bg-sky-500' : ''} w-full z-50 transition-all`}>
+        <div className={`fixed ${bgChange ? 'bg-slate-500' : ''} w-full z-50 transition-all`}>
             <div className="py-2 font-display font-semibold text-[16px] tracking-wide">
                 <div className="navbar container mx-auto ">
                     <div className="lg:navbar-start justify-between  w-full">
