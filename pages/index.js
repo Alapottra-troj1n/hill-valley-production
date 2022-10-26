@@ -29,7 +29,6 @@ export default function Home({ posts }) {
         <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
         </Link>
         </div> 
-        
         </div>
 
       </>)

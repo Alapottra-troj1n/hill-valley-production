@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/package.module.css'
 import PhotoPackages from '../components/PhotoPackages/PhotoPackages'
 import connectDb from '../lib/connectDb';
 import ComboPackages from '../components/PhotoPackages/ComboPackage';
+import { isMobile } from 'react-device-detect';
+import Image from 'next/image';
 
 const Packages = ({ photoPackages, comboPackages }) => {
     const [currentPage, setCurrentPage] = useState('photo');
 
-    return (
-        <div>
-            <div className="bg-slate-300" >
+    const [hero, setHero] = useState('');
+
+    useEffect(() => {
+        if (isMobile) {
+            setHero(<div className="relative h-[80vh]" ><Image src={'/packagesBg.jpg'} objectFit='cover' objectPosition='center' layout="fill" /> </div>)
+        } else {
+            setHero(<>
                 <div className={styles.packageBg} >
 
                 </div>
+            </>)
+        }
+    }, [])
+
+    return (
+        <div>
+            <div className="bg-slate-300" >
+            {hero}
             </div>
 
 

@@ -34,11 +34,11 @@ const Navbar = () => {
 
 
     const navLinks = <>
-        <Link href={'/'} ><li className={`cursor-pointer hover:text-main_light transition-all ${pathname === '/' && 'text-slate-600'}`} >HOME</li></Link>
-        <Link href={'/photography'} ><li className={`cursor-pointer hover:text-main_light transition-all ${pathname === '/photography' && 'text-slate-600'} `} >PHOTOGRAPHY</li></Link>
-        <Link href={'/films'} ><li className={`cursor-pointer hover:text-main_light transition-all ${pathname === '/films' && 'text-slate-600'}`} >FILMS</li></Link>
-        <Link href={'/packages'} ><li className={`cursor-pointer hover:text-main_light transition-all ${pathname === '/packages' && 'text-slate-600'}`} >PACKAGES</li></Link>
-        <Link href={'/contact'} ><li className={`cursor-pointer hover:text-main_light transition-all ${pathname === '/contact' && 'text-slate-600'}`} >CONTACT</li></Link>
+        <Link href={'/'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >HOME</li></Link>
+        <Link href={'/photography'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >PHOTOGRAPHY</li></Link>
+        <Link href={'/films'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >FILMS</li></Link>
+        <Link href={'/packages'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >PACKAGES</li></Link>
+        <Link href={'/contact'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >CONTACT</li></Link>
 
     </>
 
