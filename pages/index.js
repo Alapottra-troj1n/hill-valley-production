@@ -6,12 +6,29 @@ import PhotoCard from '../components/PhotoCard';
 import connectDb from '../lib/connectDb';
 import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
+import { isMobile } from 'react-device-detect';
+import { useEffect, useState } from 'react';
 
 
 
 export default function Home({ posts }) {
 
 
+  const [hero, setHero] = useState('');
+
+  useEffect(() => {
+    if (isMobile) {
+
+      setHero(<div className="relative h-[80vh]" ><Image src={'/hero_mobile.jpg'} objectFit='cover' objectPosition='center' layout="fill" /> </div>);
+
+    } else {
+      setHero(<div className={styles.homeBg} >
+
+
+      </div>)
+    }
+
+  }, [])
 
 
 
@@ -27,13 +44,9 @@ export default function Home({ posts }) {
       {/*******  HERO SECTION *************/}
 
 
-   
-      <div className="text-slate-200" >
-      <div className={styles.homeBg} >
+      {hero}
 
-    </div>
-      </div>
-     
+
 
       {/*******  2ND SECTION *************/}
 
@@ -80,7 +93,7 @@ export default function Home({ posts }) {
 
 
 
-  
+
 
 
 
@@ -91,7 +104,7 @@ export default function Home({ posts }) {
 
       <div className='pb-20 bg-white container mx-auto px-4 lg:px-0'>
 
-      <h2 className='text-center pt-20 pb-7 text-4xl font-display' >Recent Photoshoots</h2>
+        <h2 className='text-center pt-20 pb-7 text-4xl font-display' >Recent Photoshoots</h2>
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
           {posts.map(post => <PhotoCard key={post._id} data={post} />)}
@@ -127,7 +140,7 @@ export default function Home({ posts }) {
             <div className='flex justify-center items-center' >
 
               <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button></Link>
-              
+
             </div>
           </div>
 
@@ -140,16 +153,16 @@ export default function Home({ posts }) {
       {/************* 6TH SECTION *************/}
 
 
-        <ContactForm/>
+      <ContactForm />
 
 
       {/************* 7TH SECTION *************/}
 
 
-     {/* '100044432706390' */}
+      {/* '100044432706390' */}
 
-      
-     
+
+
 
 
 
@@ -177,7 +190,7 @@ export async function getStaticProps(context) {
 
 
   return {
-    props: { posts: JSON.parse(JSON.stringify(allPosts))},
+    props: { posts: JSON.parse(JSON.stringify(allPosts)) },
     revalidate: 7200,
   }
 }

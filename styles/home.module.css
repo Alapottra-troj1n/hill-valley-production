@@ -30,25 +30,3 @@
 }
 
 
-@media screen and (max-width: 667px){
-
-    .homeBg{
-        background:linear-gradient(0deg, rgba(9, 9, 9, 0), rgba(9, 9, 9, 0)), url('/hero_mobile.jpg');
-        height: 80vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center  center;
-        background-attachment: fixed;
-    }
-
-    .secondBg{
-        background:linear-gradient(0deg, rgba(9, 9, 9, 0.0), rgba(9, 9, 9, 0.0)), url('/4bg.jpg');
-        height: 80vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: -1050px center;
-      
-    }
-
-}
