@@ -21,7 +21,18 @@ export default function Home({ posts }) {
     if (isMobile) {
 
       setHero(<div className="relative h-[80vh]" ><Image src={'/hero_mobile.jpg'} objectFit='cover' objectPosition='center' layout="fill" /> </div>);
-      setVideoBg(<div className="relative h-[100vh]" ><Image src={'/4bg.jpg'} objectFit='cover' objectPosition='-1000px' layout="fill" /> </div>)
+      setVideoBg(<>
+        <div className="relative h-[100vh]" > 
+
+        <Image src={'/4bg_mobile_opa.jpg'} objectFit='cover' objectPosition='center' layout="fill" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" >
+        <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
+        </Link>
+        </div> 
+        
+        </div>
+
+      </>)
     } else {
       setHero(<div className={styles.homeBg} >
       </div>)
@@ -139,7 +150,7 @@ export default function Home({ posts }) {
 
 
 
-      <div className='py-20 bg-white' >
+      <div className=' bg-white' >
 
 
         {/* <div className={styles.bgVideo} >
