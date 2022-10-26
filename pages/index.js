@@ -31,7 +31,7 @@ export default function Home({ posts }) {
       <div className="text-slate-200" >
       <div className={styles.homeBg} >
 
-</div>
+    </div>
       </div>
      
 

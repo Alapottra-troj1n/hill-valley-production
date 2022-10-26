@@ -96,15 +96,7 @@ const Post = ({ data }) => {
 
             </div>
 
-            <div className='text-slate-500 pb-10' >
-                <div className='text-center' >
-                    <h2 className='font-display text-2xl' >Follow us on Instagram</h2>
-                    <a href={'https://www.instagram.com/productionhillvalley/'} target='_blank' rel="noreferrer" className='font-type text-md cursor-pointer hover:text-main transition-all' >@productionhillvalley</a>
-
-                </div>
-
-            </div>
-
+        
 
 
 

@@ -22,12 +22,12 @@ const Footer = () => {
                     <div className="flex flex-col gap-3 " >
                         <Link href={'/films'} ><li className='cursor-pointer hover:text-main transition-all' >Films</li></Link>
                         <Link href={'/photography'} ><li className='cursor-pointer hover:text-main transition-all' >Photography</li></Link>
-                        <Link href={'/packages'} ><li className='cursor-pointer hover:text-main transition-all' >Packages</li></Link>
+                       
                     </div>
                     <div className="flex flex-col gap-3" >
 
                         <Link href={'/contact'} ><li className='cursor-pointer hover:text-main transition-all' >Contact</li></Link>
-
+                        <Link href={'/packages'} ><li className='cursor-pointer hover:text-main transition-all' >Packages</li></Link>
                     </div>
 
                 </div>
