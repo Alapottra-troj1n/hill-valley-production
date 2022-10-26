@@ -11,7 +11,7 @@ const Navbar = () => {
 
         const changeNavbar = () => {
 
-            if(window.scrollY >= 790){
+            if(window.scrollY >= 730){
                 setBgChance(true);
             }else if (window.scrollY <= 550 ){
                 setBgChance(false);
