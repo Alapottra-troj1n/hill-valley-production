@@ -15,15 +15,30 @@ export default function Home({ posts }) {
 
 
   const [hero, setHero] = useState('');
+  const [videoBg, setVideoBg] = useState('')
 
   useEffect(() => {
     if (isMobile) {
 
       setHero(<div className="relative h-[80vh]" ><Image src={'/hero_mobile.jpg'} objectFit='cover' objectPosition='center' layout="fill" /> </div>);
-
+      setVideoBg(<div className="relative h-[100vh]" ><Image src={'/4bg.jpg'} objectFit='cover' objectPosition='-1000px' layout="fill" /> </div>)
     } else {
       setHero(<div className={styles.homeBg} >
+      </div>)
 
+
+      setVideoBg(<div className={styles.secondBg} >
+
+        <div className='flex justify-center flex-col gap-4 items-center h-full' >
+          <div className="cursor-pointer text-xl relative lg:w-[221px] lg:h-[104px] w-36 h-16 ">
+            <Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' />
+          </div>
+          <div className='flex justify-center items-center' >
+
+            <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button></Link>
+
+          </div>
+        </div>
 
       </div>)
     }
@@ -131,20 +146,7 @@ export default function Home({ posts }) {
         <video src={"/video.mp4"} autoPlay loop mute   />
         </div> */}
 
-        <div className={styles.secondBg} >
-
-          <div className='flex justify-center flex-col gap-4 items-center h-full' >
-            <div className="cursor-pointer text-xl relative lg:w-[221px] lg:h-[104px] w-36 h-16 ">
-              <Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' />
-            </div>
-            <div className='flex justify-center items-center' >
-
-              <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button></Link>
-
-            </div>
-          </div>
-
-        </div>
+        {videoBg}
 
       </div>
 

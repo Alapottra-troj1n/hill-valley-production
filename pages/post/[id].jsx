@@ -1,24 +1,31 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import connectDb from '../../lib/connectDb';
 const { ObjectId } = require("mongodb");
 import { isMobile } from 'react-device-detect';
 
 const Post = ({ data }) => {
 
+    const [postBg, setPostBg] = useState('')
 
+    useEffect(() => {
+
+        if (isMobile) {
+            setPostBg(<div className="relative h-[80vh]" ><Image src={data[0]["mobile cover"]} objectFit='cover' objectPosition='center' layout="fill" /> <h2 className=' text-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-display text-center font-semibold' >{data[0].title}</h2></div>)
+        } else {
+            setPostBg(<div rel='preload' style={{ backgroundImage: `url(${data[0].coverphoto})` }} className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[50vh] bg-fixed bg-slate-200`} >
+
+                <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold war ' >{data[0].title}</h2>
+
+            </div>)
+        }
+
+
+    }, [])
 
     return (
         <div className="text-white " >
-            {isMobile ? <div rel='preload' style={{ backgroundImage: `url(${data[0]["mobile cover"]})` }} className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[70vh] bg-fixed bg-slate-200`} >
-
-                <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >{data[0].title}</h2>
-
-            </div> : <div rel='preload' style={{ backgroundImage: `url(${data[0].coverphoto})` }} className={`flex justify-center items-center bg-no-repeat bg-cover bg-center lg:h-[80vh] h-[50vh] bg-fixed bg-slate-200`} >
-
-                <h2 className='font-display text-center text-3xl lg:text-7xl font-semibold' >{data[0].title}</h2>
-
-            </div>}
+            { postBg }
 
             <div className='py-24 container mx-auto text-slate-500 font-normal font-type  lg:px-40  px-4'>
 
@@ -96,7 +103,7 @@ const Post = ({ data }) => {
 
             </div>
 
-        
+
 
 
 
