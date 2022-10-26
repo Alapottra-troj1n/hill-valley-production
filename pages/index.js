@@ -104,7 +104,7 @@ export default function Home({ posts }) {
 
       <div className='pb-20 bg-white container mx-auto px-4 lg:px-0'>
 
-        <h2 className='text-center pt-20 pb-7 text-4xl font-display' >Recent Photoshoots</h2>
+        <h2 className='text-center pt-20 pb-7 lg:text-4xl text-3xl font-display' >Recent Photoshoots</h2>
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
           {posts.map(post => <PhotoCard key={post._id} data={post} />)}
