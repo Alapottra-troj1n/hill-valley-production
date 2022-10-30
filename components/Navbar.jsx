@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 const Navbar = () => {
 
     const [bgChange, setBgChance] = useState(false);
-   
+
     useEffect(()=>{
 
         const changeNavbar = () => {
@@ -45,7 +45,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`fixed ${bgChange ? 'bg-main' : ''} w-full z-50 transition-all`}>
+        <div className={`fixed ${bgChange ? 'bg-main' : pathname === '/admin' ? 'bg-main' : ''} w-full z-50 transition-all`}>
             <div className="py-2 font-display font-semibold text-[16px] tracking-wide">
                 <div className="navbar container mx-auto ">
                     <div className="lg:navbar-start justify-between  w-full">

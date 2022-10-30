@@ -20,7 +20,7 @@ export default function Home({ posts }) {
   useEffect(() => {
     if (isMobile) {
 
-      setHero(<div className="relative h-[80vh]" ><Image src={'/hero_mobile.jpg'} objectFit='cover' objectPosition='center' layout="fill" /> </div>);
+      setHero(<div className="relative h-[80vh]" ><Image src={'/hero_mobile.jpg'} objectFit='cover' objectPosition='center' layout='fill' /> </div>);
       setVideoBg(<>
         <div className="relative h-[100vh]" > 
 
