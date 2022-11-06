@@ -1,5 +1,4 @@
 import NextAuth from 'next-auth';
-import GithubProvider from 'next-auth/providers/github';
 import CredentialsProvider from "next-auth/providers/credentials";
 import connectDb from '../../../lib/connectDb';
 
@@ -15,18 +14,18 @@ export default NextAuth({
             
                 console.log(username,password);
 
-                // const db = await connectDb();
-                // const user = await db.collection('users').find({ email: email, password: password }).toArray();
+                const db = await connectDb();
+                const user = await db.collection('users').find({ email: email, password: password }).toArray();
 
-                // if (user.length > 0) {
-                //     const loggedUser = user[0];
+                if (user.length > 0) {
+                    const loggedUser = user[0];
 
-                //     return { "id: loggedUser._id, email: loggedUser.email, name: loggedUser.username":true }
-                // } else {
+                    return { id: loggedUser._id, email: loggedUser.email, name: loggedUser.username }
+                } else {
 
-                //     throw new Error('invailed credentials')
+                    throw new Error('invailed credentials')
 
-                // }
+                }
 
 
 
