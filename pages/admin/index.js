@@ -23,12 +23,10 @@ const Admin = () => {
           
         }
         if (res.ok) {
-            console.log(res)
+             console.log(res)
 
 
         }
-
-        console.log(admin);
 
     }
 

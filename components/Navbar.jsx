@@ -1,3 +1,4 @@
+import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -6,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 const Navbar = () => {
 
     const [bgChange, setBgChance] = useState(false);
+    const { data, status } = useSession();
 
     useEffect(()=>{
 
@@ -38,13 +40,14 @@ const Navbar = () => {
         <Link href={'/photography'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >PHOTOGRAPHY</li></Link>
         <Link href={'/films'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >FILMS</li></Link>
         <Link href={'/contact'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >CONTACT</li></Link>
+        {status ==='authenticated' && <button onClick={signOut} className='cursor-pointer btn hover:text-main transition-all' >Log OUT</button>}
 
     </>
 
 
 
     return (
-        <div className={`fixed ${bgChange ? 'bg-main' : pathname === '/admin' ? 'bg-main' : ''} w-full z-50 transition-all`}>
+        <div className={`fixed ${bgChange ? 'bg-main' : pathname.includes('/admin') === true ?   'bg-main' : ''} w-full z-50 transition-all`}>
             <div className="py-2 font-display font-semibold text-[16px] tracking-wide">
                 <div className="navbar container mx-auto ">
                     <div className="lg:navbar-start justify-between  w-full">
@@ -62,8 +65,8 @@ const Navbar = () => {
                             <Link href={'/'} ><Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' /></Link>
                         </div>
                     </div>
-                    <div className="navbar-end hidden lg:flex">
-                        <ul className="menu menu-horizontal p-0 md:gap-5 xl:gap-7  text-sm lg:text-md lg:text-white">
+                    <div className="navbar-end hidden lg:flex  ">
+                        <ul className="menu menu-horizontal p-0 md:gap-5 xl:gap-7  text-sm lg:text-md lg:text-white lg:items-center">
                             {navLinks}
                         </ul>
                     </div>

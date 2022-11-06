@@ -12,18 +12,18 @@ export default NextAuth({
             async authorize(credentials, req) {
                 const { username, password } = credentials;
             
-                console.log(username,password);
+            
 
                 const db = await connectDb();
-                const user = await db.collection('users').find({ email: email, password: password }).toArray();
-
+                const user = await db.collection('admin').find({ name: username, password: password }).toArray();
+                console.log(user);
                 if (user.length > 0) {
                     const loggedUser = user[0];
 
-                    return { id: loggedUser._id, email: loggedUser.email, name: loggedUser.username }
+                    return { id: loggedUser._id, username: loggedUser.username }
                 } else {
 
-                    throw new Error('invailed credentials')
+                    throw new Error('Invailed Credentials | Ask Antar da for Credentials.. Thanks vei')
 
                 }
 
