@@ -5,6 +5,7 @@ import Fashion from '../components/Photography/Fashion';
 import Food from '../components/Photography/Food';
 import Wedding from '../components/Photography/Wedding';
 import connectDb from '../lib/connectDb';
+import { animate, motion } from "framer-motion";
 
 const Photography = ({posts}) => {
 
@@ -36,12 +37,28 @@ const Photography = ({posts}) => {
  
 
     return (
-        <div>
+        <motion.div
+        initial={{
+            opacity: 0,
+
+          }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
+        >
     
 
-            <div className='bg-slate-300 relative h-[80vh] w-full'>
+            <motion.div className='bg-slate-300 relative h-[80vh] w-full'
+             key={bg}
+            initial={{
+                opacity: 0,
+    
+              }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.7, ease: 'easeOut' }}
+            
+            >
                 <Image priority={true} src={bg} alt='photography-bg' layout='fill' objectFit='cover' objectPosition={'center'}/>
-            </div>
+            </motion.div>
 
 
 
@@ -73,7 +90,7 @@ const Photography = ({posts}) => {
             </div>
 
 
-        </div>
+        </motion.div>
     );
 };
 

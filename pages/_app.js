@@ -1,5 +1,6 @@
 
 
+import { AnimatePresence } from 'framer-motion';
 import { SessionProvider } from 'next-auth/react';
 import AuthWrapper from '../components/AuthWrapper';
 import Footer from '../components/Footer';
@@ -18,9 +19,13 @@ function MyApp({ Component, pageProps }) {
     <>
       <SessionProvider session={pageProps.session} >
       <AuthWrapper>
+      <AnimatePresence>
       <Navbar />
+     
       <Component {...pageProps} />
+     
       <Footer />
+      </AnimatePresence>
       </AuthWrapper>
       </SessionProvider>
     </>)

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import connectDb from '../../lib/connectDb';
 const { ObjectId } = require("mongodb");
 import { isMobile } from 'react-device-detect';
+import { animate, motion } from "framer-motion";
 
 const Post = ({ data }) => {
 
@@ -24,7 +25,16 @@ const Post = ({ data }) => {
     }, [])
 
     return (
-        <div className="text-white " >
+        <motion.div className="text-white " 
+        
+        initial={{
+            opacity: 0,
+
+          }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
+
+        >
             { postBg }
 
             <div className='py-24 container mx-auto text-slate-500 font-normal font-type  lg:px-40  px-4'>
@@ -39,7 +49,7 @@ const Post = ({ data }) => {
 
 
 
-                    <div className="relative lg:h-[700px] h-[300px] w-full " >
+                    <div className="relative lg:h-[700px] h-[300px] w-full ">
                         <Image src={data[0].img1} alt='img1' layout='fill' objectFit='cover' objectPosition={'center'} />
                     </div>
 
@@ -112,7 +122,7 @@ const Post = ({ data }) => {
 
 
 
-        </div>
+        </motion.div>
     );
 };
 

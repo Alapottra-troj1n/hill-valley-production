@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import ContactForm from '../components/ContactForm';
 import styles from '../styles/contact.module.css'
+import { animate, motion } from "framer-motion";
 
 const Contact = () => {
 
@@ -23,7 +24,18 @@ const Contact = () => {
 
 
     return (
-        <div>
+        <motion.div
+        
+         
+        initial={{
+            opacity: 0,
+
+          }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
+
+        
+        >
             <div className="bg-slate-300" >
                 {hero}
             </div>
@@ -31,7 +43,7 @@ const Contact = () => {
                 <ContactForm />
             </div>
 
-        </div>
+        </motion.div>
     );
 };
 

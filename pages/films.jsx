@@ -1,12 +1,22 @@
 import React from 'react';
-
+import { animate, motion } from "framer-motion"
 
 const Flims = () => {
 
 
 
     return (
-        <div  >
+        <motion.div
+        
+        initial={{
+            opacity: 0,
+           
+          }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
+        
+        
+        >
 
             <div className='relative lg:h-[80vh] h-[20vh] w-full bg-black '>
                 <div className='z-10  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' role="status">
@@ -50,7 +60,7 @@ const Flims = () => {
              </div>
             </div>
 
-        </div>
+        </motion.div>
     );
 };
 

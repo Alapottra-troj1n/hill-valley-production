@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import { animate, motion } from "framer-motion";
 
 const Navbar = () => {
 
@@ -47,7 +48,20 @@ const Navbar = () => {
 
 
     return (
-        <div className={`fixed ${bgChange ? 'bg-main' : pathname.includes('/admin') === true ?   'bg-main' : ''} w-full z-50 transition-all`}>
+        <motion.div className={`fixed ${bgChange ? 'bg-main' : pathname.includes('/admin') === true ?   'bg-main' : ''} w-full z-50 transition-all`}
+        
+        initial={{
+            opacity: 0,
+           
+          }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
+          
+          
+        
+        
+        
+        >
             <div className="py-2 font-display font-semibold text-[16px] tracking-wide">
                 <div className="navbar container mx-auto ">
                     <div className="lg:navbar-start justify-between  w-full">
@@ -73,7 +87,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

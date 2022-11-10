@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 const Admin = () => {
 
-    const [error,setError] = useState('')
+    const [error,setError] = useState('');
+
+    const router = useRouter();
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -23,7 +26,8 @@ const Admin = () => {
           
         }
         if (res.ok) {
-             console.log(res)
+             
+            router.push('/admin/dashboard')
 
 
         }
