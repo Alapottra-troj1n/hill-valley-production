@@ -27,7 +27,7 @@ const Footer = () => {
                     <div className="flex flex-col gap-3" >
 
                         <Link href={'/contact'} ><li className='cursor-pointer hover:text-main transition-all' >Contact</li></Link>
-                        <Link href={'/packages'} ><li className='cursor-pointer hover:text-main transition-all' >Packages</li></Link>
+                   
                     </div>
 
                 </div>
