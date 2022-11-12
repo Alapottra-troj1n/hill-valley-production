@@ -70,7 +70,7 @@ export default function Home({ posts }) {
 
 
     >
-      <Head>
+
       <Head>
         <title>Hill Valley Production</title>
         <meta
@@ -81,7 +81,7 @@ export default function Home({ posts }) {
         <meta property="og:image" content={"https://i.ibb.co/6rKW9WW/fashion.jpg"} />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      </Head>
+
 
 
       {/*******  HERO SECTION *************/}
