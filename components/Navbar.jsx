@@ -3,12 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
 
     const [bgChange, setBgChance] = useState(false);
     const { data, status } = useSession();
+    const router = useRouter();
+    const { pathname } = router;
 
     useEffect(()=>{
 
@@ -22,6 +24,8 @@ const Navbar = () => {
 
         }
 
+     
+
         window.addEventListener('scroll',changeNavbar );
 
 
@@ -31,17 +35,16 @@ const Navbar = () => {
 
     },[])
 
-    const router = useRouter();
-
-    const { pathname } = router;
+  
+    
 
 
     const navLinks = <>
-        <Link href={'/'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >HOME</li></Link>
-        <Link href={'/photography'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >PHOTOGRAPHY</li></Link>
-        <Link href={'/films'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >FILMS</li></Link>
-        <Link href={'/contact'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >CONTACT</li></Link>
-        {status ==='authenticated' && <button onClick={signOut} className='cursor-pointer btn hover:text-main transition-all' >Log OUT</button>}
+        <Link  href={'/'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >HOME</li></Link>
+        <Link  href={'/photography'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >PHOTOGRAPHY</li></Link>
+        <Link  href={'/films'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >FILMS</li></Link>
+        <Link  href={'/contact'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >CONTACT</li></Link>
+        {status ==='authenticated' && <button onClick={signOut} className='cursor-pointer btn hover:text-main transition-all' >Log Out</button>}
 
     </>
 
@@ -70,7 +73,7 @@ const Navbar = () => {
                             <label tabIndex={0} className="btn btn-ghost lg:hidden mr-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                             </label>
-                            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-52 gap-8 lg:text-white p-5">
+                          <ul tabIndex={0} className={` menu menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-52 gap-8 lg:text-white p-5`}>
                                 {navLinks}
                             </ul>
 

@@ -11,7 +11,7 @@ const Contact = () => {
 
     useEffect(() => {
         if (isMobile) {
-            setHero(<div className="relative h-[80vh]" ><Image src={'/contactBg.jpg'} objectFit='cover' objectPosition='-270px center' layout="fill" /> </div>)
+            setHero(<div className="relative h-[80vh]" ><Image src={'/contactBg.jpg'} objectFit='cover' objectPosition='center center' layout="fill" /> </div>)
         } else {
             setHero(<>
                 <div className={styles.contactBg} >

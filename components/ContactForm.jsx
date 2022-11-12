@@ -1,13 +1,28 @@
 import React from 'react';
 
 const ContactForm = () => {
+
+
+
+    const handleSubmit = () => {
+
+
+    }
+
+
+
+
+
+
+
+
     return (
 
         <div className='pb-20 pt-10 bg-white ' >
             <h2 className='font-display text-3xl lg:text-4xl text-center' >Contact us</h2>
 
             <div className='flex justify-center mt-20 w-full' >
-                <form className='font-type mt-2 flex flex-col gap-7 text-sm w-full lg:w-auto px-10 lg:px-0' >
+                <form onSubmit={handleSubmit} className='font-type mt-2 flex flex-col gap-7 text-sm w-full lg:w-auto px-10 lg:px-0' >
 
                     <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
                         <label htmlFor='clientName' className='lg:mr-8' >Name :</label>
