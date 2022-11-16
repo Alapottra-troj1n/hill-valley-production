@@ -18,15 +18,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <SessionProvider session={pageProps.session} >
-      <AuthWrapper>
-      <AnimatePresence>
-      <Navbar />
-     
-      <Component {...pageProps} />
-     
-      <Footer />
-      </AnimatePresence>
-      </AuthWrapper>
+        <AuthWrapper>
+          <Navbar />
+          <Component {...pageProps} />
+          <Footer />
+        </AuthWrapper>
       </SessionProvider>
     </>)
 }
