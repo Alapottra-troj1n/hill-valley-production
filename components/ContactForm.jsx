@@ -1,12 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const ContactForm = () => {
 
+    const [clientMsg, setClientMsg] = useState('');
+ 
+    const handleSubmit = async(e) => {
+            e.preventDefault();
+
+            const response = {
+                name : e.target.clientName.value,
+                email : e.target.clientEmail.value,
+                phone: e.target.clientPhone.value,
+                address: e.target.clientAddress.value,
+                date : e.target.clientDate.value,
+                message: clientMsg
 
 
-    const handleSubmit = () => {
+            }
+
+            const settings = {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(response)
+            };
+    
+            const res = await fetch('https://www.hillvalleyproduction.com/api/addresponse', settings);
+            const data = await res.json();
+    
+            if(data.success) {
+                toast.success("Thank you for connecting. We'll contact you within few hours");
+                e.target.reset();
+                
+            }
 
 
+
+         
+
+           
     }
 
 
@@ -51,7 +86,7 @@ const ContactForm = () => {
 
                     <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
                         <label className='lg:mr-8' >Message :</label>
-                        <textarea className="border-b border-slate-700 lg:w-96 w-[80%]  h-48 p-2" />
+                        <textarea onChange={(e) => setClientMsg(e.target.value)} className="border-b border-slate-700 lg:w-96 w-[80%]  h-48 p-2" />
 
                     </div>
 
