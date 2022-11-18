@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import AddPost from '../../components/AdminDashboard/AddPost';
 import ManagePost from '../../components/AdminDashboard/ManagePost';
+import Responses from '../../components/AdminDashboard/Responses';
 import connectDb from '../../lib/connectDb'
-const Dashboard = ({allPosts}) => {
+const Dashboard = ({allPosts,allResponses}) => {
 
    const [adminOption, setAdminOption] = useState('ManagePosts');
    const [posts, setPosts] = useState(allPosts);
+   const [response, setResponse] = useState(allResponses)
 
 
 
@@ -16,7 +18,7 @@ const Dashboard = ({allPosts}) => {
                 <h2 className="text-center text-4xl " >Admin Dashboard</h2>
             </div>
 
-            <div className="grid grid-cols-[30%,60%]" >
+            <div className="grid grid-cols-[20%,70%]" >
 
                 <div className="flex flex-col px-10 gap-4 text-lg" >
                         <button onClick={() => setAdminOption('ManagePosts') } className={`${adminOption === 'ManagePosts' ? 'bg-main' : 'bg-slate-200'} py-4 rounded-md`}>Manage Posts</button>
@@ -29,6 +31,7 @@ const Dashboard = ({allPosts}) => {
 
                      {adminOption === 'ManagePosts' && <ManagePost setAdminOption={setAdminOption} posts={posts} setPosts={setPosts} />}   
                      {adminOption === 'addPost' && <AddPost setAdminOption={setAdminOption} setPosts={setPosts} posts={posts} />}
+                     {adminOption === 'SeeResponses' && <Responses response={response} setResponse={setResponse} />}
                     
 
 
@@ -48,16 +51,16 @@ export default Dashboard;
 
 
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 
 
     const db = await connectDb();
     const allPosts = await db.collection("posts").find({}).toArray();
+    const allResponses = await db.collection("responses").find({}).toArray();
   
   
   
     return {
-      props: { allPosts: JSON.parse(JSON.stringify(allPosts)) },
-      revalidate: 60, // will be passed to the page component as props
+      props: { allPosts: JSON.parse(JSON.stringify(allPosts)),allResponses: JSON.parse(JSON.stringify(allResponses)) },
     }
   }
