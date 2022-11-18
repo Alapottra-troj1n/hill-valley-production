@@ -10,7 +10,7 @@ import { isMobile } from 'react-device-detect';
 import { useEffect, useState } from 'react';
 import { animate, motion } from "framer-motion"
 
-export default function Home({ posts }) {
+export default function Home({ posts, homepage1, homepage2, homepage3, homepage4, homepage5}) {
 
 
   const [hero, setHero] = useState('');
@@ -106,24 +106,24 @@ export default function Home({ posts }) {
 
           <div className='grid grid-cols-2 gap-3 lg:gap-5'>
             <div className='relative lg:h-[534px] h-[154px] w-full' >
-              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage1.jpg'} />
+              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={homepage1} />
             </div>
             <div className='relative lg:h-[534px] h-[154px] w-full' >
-              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage2.jpg'} />
+              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={homepage2} />
             </div>
           </div>
 
           <div className='relative lg:h-[634px] h-[234px] w-full' >
-            <Image layout='fill' objectFit='cover' alt='homepagephoto' objectPosition={'center'} src={'/homepage3.jpg'} />
+            <Image layout='fill' objectFit='cover' alt='homepagephoto' objectPosition={'center'} src={homepage3} />
           </div>
 
 
           <div className='grid grid-cols-2 gap-3 lg:gap-5'>
             <div className='relative lg:h-[805px] h-[255px] w-full' >
-              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage4.jpg'} />
+              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={homepage4} />
             </div>
             <div className='relative lg:h-[805px] h-[255px] w-full' >
-              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={'/homepage5.jpg'} />
+              <Image layout='fill' objectFit='cover' alt='homepagephoto' src={homepage5} />
             </div>
           </div>
 
@@ -147,7 +147,7 @@ export default function Home({ posts }) {
 
       <div className='pb-20 bg-white container mx-auto px-4 lg:px-0'>
 
-        <h2 className='text-center pt-20 pb-7 lg:text-4xl text-3xl font-display' >Recent Photoshoots</h2>
+        <h2 className='text-center pt-20 pb-7 lg:text-4xl text-3xl font-display' >Featured Photoshoots</h2>
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-20' >
           {posts.map(post => <PhotoCard key={post._id} data={post} />)}
