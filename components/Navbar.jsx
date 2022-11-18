@@ -51,7 +51,9 @@ const Navbar = () => {
         <Link href={'/photography'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >PHOTOGRAPHY</li></Link>
         <Link href={'/films'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >FILMS</li></Link>
         <Link href={'/contact'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >CONTACT</li></Link>
+        {status === 'authenticated' && <Link href={'/admin/dashboard'} ><li className={`cursor-pointer hover:text-main_light transition-all `} >DASHBOARD</li></Link>}
         {status === 'authenticated' && <button onClick={signOut} className='cursor-pointer btn hover:text-main transition-all' >Log Out</button>}
+     
 
     </>
 

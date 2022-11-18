@@ -2,7 +2,28 @@ import React from 'react';
 
 const ManagePost = ({allPosts,setAdminOption}) => {
 
-    console.log(allPosts);
+
+
+    const handleDelete = async(id) => {
+        const settings = {
+            method: 'DELETE',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            }
+          
+        };
+      
+        const res = await fetch(`http://localhost:3000/api/deletepost?_id=${id}`, settings);
+        const d = await res.json();
+      
+       if(d.success) {
+            console.log('deleted');    
+       }
+      
+    }
+
+    
 
     return (
         <div className="bg-sky-50 p-10 rounded-md" >
@@ -30,7 +51,7 @@ const ManagePost = ({allPosts,setAdminOption}) => {
                                 <tr key={post._id}>
                                 <th>{index + 1}</th>
                                 <td>{post.title}</td>
-                                <td><button className="btn btn-sm  border-0">Edit</button> <button className="btn btn-sm bg-red-600 border-0">Delete</button></td>
+                                <td> <button onClick={() => handleDelete(post._id) } className="btn btn-sm bg-red-600 border-0">Delete</button></td>
                        
                             </tr>
                         ))}
