@@ -6,9 +6,10 @@ export default async function handler(req, res) {
      try{
         const db = await connectDb();
         const results = await db.collection('posts').insertOne(req.body);
-        res.send({success: true, message: results});
+        const newPost = await db.collection('posts').findOne({title: req.body.title});
+        res.send({success: true, message: results, newPost: newPost});
      }catch(err){
-        console.log(err);
+    
         res.send({success: false, message: err.message});
      }
       

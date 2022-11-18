@@ -1,6 +1,7 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const ManagePost = ({allPosts,setAdminOption}) => {
+const ManagePost = ({posts,setAdminOption,setPosts}) => {
 
 
 
@@ -18,7 +19,9 @@ const ManagePost = ({allPosts,setAdminOption}) => {
         const d = await res.json();
       
        if(d.success) {
-            console.log('deleted');    
+            toast.success('Post has been deleted successfully.')  ;
+            let filteredArray = posts.filter(item => item._id !== id);
+            setPosts(filteredArray);    
        }
       
     }
@@ -47,7 +50,7 @@ const ManagePost = ({allPosts,setAdminOption}) => {
                         </thead>
                         <tbody>
              
-                        {allPosts.map((post,index) => (
+                        {posts.map((post,index) => (
                                 <tr key={post._id}>
                                 <th>{index + 1}</th>
                                 <td>{post.title}</td>

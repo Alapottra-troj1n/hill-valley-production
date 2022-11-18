@@ -1,5 +1,5 @@
 import connectDb from "../../lib/connectDb";
-var ObjectId = require('mongodb');
+var ObjectId = require('mongodb').ObjectID;
 
 export default async function handler(req, res) {
     if (req.method == "DELETE") {
@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         res.send({success: true, message: 'post has been deleted', data: results});
      }catch(err){
 
-        console.log(err);
+   
         res.send({success: false, message: err.message});
      }
       

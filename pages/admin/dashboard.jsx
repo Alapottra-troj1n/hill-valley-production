@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import AddPost from '../../components/AdminDashboard/AddPost';
 import ManagePost from '../../components/AdminDashboard/ManagePost';
@@ -6,7 +6,7 @@ import connectDb from '../../lib/connectDb'
 const Dashboard = ({allPosts}) => {
 
    const [adminOption, setAdminOption] = useState('ManagePosts');
-
+   const [posts, setPosts] = useState(allPosts);
 
 
 
@@ -27,8 +27,8 @@ const Dashboard = ({allPosts}) => {
 
                 <div>
 
-                     {adminOption === 'ManagePosts' && <ManagePost setAdminOption={setAdminOption} allPosts={allPosts} />}   
-                     {adminOption === 'addPost' && <AddPost setAdminOption={setAdminOption} />}
+                     {adminOption === 'ManagePosts' && <ManagePost setAdminOption={setAdminOption} posts={posts} setPosts={setPosts} />}   
+                     {adminOption === 'addPost' && <AddPost setAdminOption={setAdminOption} setPosts={setPosts} posts={posts} />}
                     
 
 
@@ -53,7 +53,6 @@ export async function getStaticProps(context) {
 
     const db = await connectDb();
     const allPosts = await db.collection("posts").find({}).toArray();
-    console.log(allPosts);
   
   
   

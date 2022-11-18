@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { toast } from 'react-toastify';
 
-const AddPost = ({ setAdminOption }) => {
+const AddPost = ({ setAdminOption,setPosts,posts }) => {
 
     const [category, setCategory] = useState('wedding');
     
@@ -42,6 +42,9 @@ const AddPost = ({ setAdminOption }) => {
         if(data.success) {
             toast.success('Added blog successfully');
             e.target.reset();
+            
+       
+            setPosts([...posts, data.newPost ])
         }
        
 
