@@ -78,7 +78,7 @@ export default function Home({ posts, homepage1, homepage2, homepage3, homepage4
           content="Hill Valley Production | A team of Young passionate photographer and cinematographer based in CHT Bangladesh."
         />
         <meta name="description" content="A team of Young passionate photographer and cinematographer based in CHT Bangladesh." />
-        <meta property="og:image" content={"https://i.ibb.co/6rKW9WW/fashion.jpg"} />
+        <meta property="og:image" content="https://i.ibb.co/6rKW9WW/fashion.jpg" />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
