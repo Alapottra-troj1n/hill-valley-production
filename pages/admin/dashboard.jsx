@@ -28,7 +28,7 @@ const Dashboard = ({allPosts}) => {
                 <div>
 
                      {adminOption === 'ManagePosts' && <ManagePost setAdminOption={setAdminOption} allPosts={allPosts} />}   
-                     {adminOption === 'addPost' && <AddPost/>}
+                     {adminOption === 'addPost' && <AddPost setAdminOption={setAdminOption} />}
                     
 
 

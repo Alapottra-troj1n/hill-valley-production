@@ -1,11 +1,10 @@
-
-
-import { AnimatePresence } from 'framer-motion';
 import { SessionProvider } from 'next-auth/react';
 import AuthWrapper from '../components/AuthWrapper';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import '../styles/globals.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function MyApp({ Component, pageProps }) {
 
@@ -21,6 +20,7 @@ function MyApp({ Component, pageProps }) {
         <AuthWrapper>
           <Navbar />
           <Component {...pageProps} />
+          <ToastContainer />
           <Footer />
         </AuthWrapper>
       </SessionProvider>
