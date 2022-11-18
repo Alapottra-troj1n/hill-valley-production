@@ -73,12 +73,11 @@ export default function Home({ posts, homepage1, homepage2, homepage3, homepage4
 
       <Head>
         <title>Hill Valley Production</title>
+        <meta property="og:image" content={"/couple3.jpg"} />
         <meta
           property="og:title"
-          content="Hill Valley Production | A team of young passionate photographer and cinematographer based in CHT Bangladesh."
-        />
+          content="Hill Valley Production" />
         <meta name="description" content="A team of young passionate photographer and cinematographer based in CHT Bangladesh." />
-        <meta property="og:image" content={"/couple3.jpg"} />
         <link rel="icon" href="/logo.png" />
       </Head>
 
