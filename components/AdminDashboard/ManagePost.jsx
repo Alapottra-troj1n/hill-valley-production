@@ -15,7 +15,7 @@ const ManagePost = ({posts,setAdminOption,setPosts}) => {
           
         };
       
-        const res = await fetch(`http://localhost:3000/api/deletepost?_id=${id}`, settings);
+        const res = await fetch(`https://www.hillvalleyproduction.com/api/deletepost?_id=${id}`, settings);
         const d = await res.json();
       
        if(d.success) {

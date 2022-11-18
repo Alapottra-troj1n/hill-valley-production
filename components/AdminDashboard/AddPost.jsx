@@ -36,7 +36,7 @@ const AddPost = ({ setAdminOption,setPosts,posts }) => {
             body: JSON.stringify(post)
         };
 
-        const res = await fetch('http://localhost:3000/api/addblog', settings);
+        const res = await fetch('https://www.hillvalleyproduction.com/api/addblog', settings);
         const data = await res.json();
 
         if(data.success) {
