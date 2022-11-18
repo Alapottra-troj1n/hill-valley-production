@@ -10,7 +10,7 @@ import { isMobile } from 'react-device-detect';
 import { useEffect, useState } from 'react';
 import { animate, motion } from "framer-motion"
 
-export default function Home({ posts, homepage1, homepage2, homepage3, homepage4, homepage5}) {
+export default function Home({ posts, homepage1, homepage2, homepage3, homepage4, homepage5 }) {
 
 
   const [hero, setHero] = useState('');
@@ -61,12 +61,12 @@ export default function Home({ posts, homepage1, homepage2, homepage3, homepage4
 
       initial={{
         opacity: 0,
-       
+
       }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
 
-      exit={{ y: -200, opacity: 0, transition: { delay: 0.5, duration: 0.7, ease: 'easeOut'}}}
+      exit={{ y: -200, opacity: 0, transition: { delay: 0.5, duration: 0.7, ease: 'easeOut' } }}
 
 
     >
@@ -75,11 +75,11 @@ export default function Home({ posts, homepage1, homepage2, homepage3, homepage4
         <title>Hill Valley Production</title>
         <meta
           property="og:title"
-          content="Hill Valley Production | A team of Young passionate photographer and cinematographer based in CHT Bangladesh."
+          content="Hill Valley Production | A team of young passionate photographer and cinematographer based in CHT Bangladesh."
         />
-        <meta name="description" content="A team of Young passionate photographer and cinematographer based in CHT Bangladesh." />
-        <meta property="og:image" content="https://i.ibb.co/6rKW9WW/fashion.jpg" />
-        <link rel="icon" href="/favicon.png" />
+        <meta name="description" content="A team of young passionate photographer and cinematographer based in CHT Bangladesh." />
+        <meta property="og:image" content={"/couple3.jpg"} />
+        <link rel="icon" href="/logo.png" />
       </Head>
 
 
