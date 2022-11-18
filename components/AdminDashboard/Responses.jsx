@@ -21,7 +21,7 @@ const Responses = ({ response, setResponse }) => {
                         </thead>
                         <tbody>
                             {response.map(res => (
-                                <tr>
+                                <tr key={res._id} >
                                     <th>{res.name}</th>
                                     <td>{res.email}</td>
                                     <td>{res.phone}</td>
