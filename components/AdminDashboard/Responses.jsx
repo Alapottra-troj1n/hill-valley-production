@@ -58,7 +58,7 @@ const Responses = ({ response, setResponse }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {response.map(res => (
+                            {response?.map(res => (
                                 <tr key={res._id} >
                                     <th>{res.name}</th>
                                     <td>{res.email}</td>

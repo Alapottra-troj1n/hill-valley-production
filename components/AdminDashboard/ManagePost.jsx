@@ -50,7 +50,7 @@ const ManagePost = ({posts,setAdminOption,setPosts}) => {
                         </thead>
                         <tbody>
              
-                        {posts.map((post,index) => (
+                        {posts?.map((post,index) => (
                                 <tr key={post._id}>
                                 <th>{index + 1}</th>
                                 <td>{post.title}</td>
