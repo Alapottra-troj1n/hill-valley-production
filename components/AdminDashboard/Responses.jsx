@@ -31,7 +31,7 @@ const Responses = ({ response, setResponse }) => {
         }
     
     return (
-        <div>
+        <div className="bg-sky-50 p-10 rounded-md">
 
             <input type="checkbox" id="my-modal-3" className="modal-toggle" />
             <div className="modal">

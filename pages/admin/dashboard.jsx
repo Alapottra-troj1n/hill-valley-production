@@ -1,10 +1,18 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import AddPost from '../../components/AdminDashboard/AddPost';
+import ManageHomepage from '../../components/AdminDashboard/ManageHomepage';
+import ManagePackages from '../../components/AdminDashboard/ManagePackages';
 import ManagePost from '../../components/AdminDashboard/ManagePost';
 import Responses from '../../components/AdminDashboard/Responses';
 import connectDb from '../../lib/connectDb'
-const Dashboard = ({allPosts,allResponses}) => {
+const Dashboard = ({allPosts,allResponses,
+
+    homepage1, homepage2, homepage3, homepage4, homepage5,
+    setHomepage1, setHomepage2, setHomepage3, setHomepage4, setHomepage5
+
+
+}) => {
 
    const [adminOption, setAdminOption] = useState('ManagePosts');
    const [posts, setPosts] = useState(allPosts);
@@ -24,6 +32,7 @@ const Dashboard = ({allPosts,allResponses}) => {
                         <button onClick={() => setAdminOption('ManagePosts') } className={`${adminOption === 'ManagePosts' ? 'bg-main' : 'bg-slate-200'} py-4 rounded-md`}>Manage Posts</button>
                         <button onClick={() => setAdminOption('ManagePackages') } className={`${adminOption === 'ManagePackages' ? 'bg-main' : 'bg-slate-200'} py-4 rounded-md`}>Manage Packages</button>
                         <button onClick={() => setAdminOption('SeeResponses') } className={`${adminOption === 'SeeResponses' ? 'bg-main' : 'bg-slate-200'} py-4 rounded-md`}>See Responses</button>
+                        <button onClick={() => setAdminOption('ManageHomepage') } className={`${adminOption === 'ManageHomepage' ? 'bg-main' : 'bg-slate-200'} py-4 rounded-md`}>Manage Homepage</button>
                       
                 </div>
 
@@ -32,6 +41,15 @@ const Dashboard = ({allPosts,allResponses}) => {
                      {adminOption === 'ManagePosts' && <ManagePost setAdminOption={setAdminOption} posts={posts} setPosts={setPosts} />}   
                      {adminOption === 'addPost' && <AddPost setAdminOption={setAdminOption} setPosts={setPosts} posts={posts} />}
                      {adminOption === 'SeeResponses' && <Responses response={response} setResponse={setResponse} />}
+                     {adminOption === 'ManagePackages' && <ManagePackages/>}
+                     {adminOption === 'ManageHomepage' && <ManageHomepage
+
+                        homepage1={homepage1} homepage2={homepage2} homepage3={homepage3} homepage4={homepage4} homepage5={homepage5}
+                        
+                        setHomepage1={setHomepage1} setHomepage2={setHomepage2} setHomepage3={setHomepage3} setHomepage4={setHomepage4} setHomepage5={setHomepage5}
+                     
+
+                     />}
                     
 
 
