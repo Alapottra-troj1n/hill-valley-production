@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { animate, motion } from "framer-motion"
-
+import { AiFillYoutube } from 'react-icons/ai';
 const Flims = () => {
 
     const [currentPage, setCurrentPage] = useState('wedding');
+
+
+
+    useEffect(() => {
+
+
+   
+    
+   
+    }, [])
+    
 
     return (
         <motion.div
@@ -49,15 +60,15 @@ const Flims = () => {
 
             <div className='py-32  flex justify-center' >
 
-                <div className='grid grid-cols-4 lg:gap-20 gap-10 font-display lg:text-xl text-sm' >
+                <div className='grid grid-cols-4 lg:gap-20 font-display lg:text-xl text-xs' >
                     <div className='hover:text-main text-center'>
-                        <h2 onClick={() => setCurrentPage('wedding')} className={`cursor-pointer  transition-all border-b-2 ${currentPage === 'wedding' ? ' border-main' : 'border-white'}`} >WEDDING</h2>
+                        <h2 onClick={() => setCurrentPage('wedding')} className={`cursor-pointer  transition-all border-b-2 ${currentPage === 'wedding' ? ' border-main' : 'border-white'}`} >MUSIC</h2>
                     </div>
                     <div className='hover:text-main text-center'>
-                        <h2 onClick={() => setCurrentPage('fashion')} className={`cursor-pointer transition-all border-b-2 ${currentPage === 'fashion' ? ' border-main' : 'border-white'} `} >FASHION</h2>
+                        <h2 onClick={() => setCurrentPage('fashion')} className={`cursor-pointer transition-all border-b-2 ${currentPage === 'fashion' ? ' border-main' : 'border-white'} `} >WEDDING</h2>
                     </div>
                     <div className='hover:text-main text-center' >
-                        <h2 onClick={() => setCurrentPage('food')} className={`cursor-pointer   transition-all border-b-2 ${currentPage === 'food' ? ' border-main' : 'border-white'}`} >FOOD</h2>
+                        <h2 onClick={() => setCurrentPage('food')} className={`cursor-pointer   transition-all border-b-2 ${currentPage === 'food' ? ' border-main' : 'border-white'}`} >FASHION</h2>
                     </div>
 
                     <div className='hover:text-main text-center' >
@@ -80,28 +91,15 @@ const Flims = () => {
                         <div className="w-full lg:h-96 h-72">
                             <iframe className="w-full h-full" src="https://www.youtube.com/embed/UYuN55OKRWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <div className="w-full lg:h-96 h-72">
-                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/E-2XF3sTuyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div className="w-full lg:h-96 h-72">
-                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/-dVMNpamI-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div className="w-full lg:h-96 h-72">
-                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/oIhD1_t4JO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div className="w-full lg:h-96 h-72">
-                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/CNU1AP-nHOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div className="w-full lg:h-96 h-72">
-                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/1KTuT1OVh8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div className="w-full lg:h-96 h-72">
-                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/LviLU7Fwuw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-
 
                     </div>
                 </div>
+
+                    <div className="flex items-center justify-center gap-3" >
+                        <h2 className="text-center text-xl font-semibold text-gray-600" >FOR MORE VISIT OUR YOUTUBE</h2>
+                        <a href="https://www.youtube.com/@HillValleyProduction" target='_blank' rel="noreferrer"><AiFillYoutube className='text-5xl  text-red-600 hover:text-red-800 transition-all' /></a>
+                    </div>
+
             </div>
 
         </motion.div>
@@ -109,3 +107,20 @@ const Flims = () => {
 };
 
 export default Flims;
+
+export async function getServerSideProps(context) {
+
+
+
+
+  const db = await connectDb();
+  const allPosts = await db.collection("posts").find({}).limit(4).toArray();
+
+
+
+  return {
+    props: { posts: JSON.parse(JSON.stringify(allPosts)) },
+    revalidate: 7200,
+  }
+  
+  }
