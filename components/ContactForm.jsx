@@ -61,36 +61,36 @@ const ContactForm = () => {
 
                     <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
                         <label htmlFor='clientName' className='lg:mr-8' >Name :</label>
-                        <input type="text" name="clientName" id="clientName" className="border-b border-slate-700 xl:w-96 py-1 px-2 w-full" />
+                        <input type="text" name="clientName" id="clientName" className="border rounded-md border-slate-400 xl:w-96 py-2 px-2 w-full" />
                     </div>
 
                     <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
                         <label htmlFor='clientEmail' className='lg:mr-8' >Email :</label>
-                        <input type="text" name="clientEmail" id="clientEmail" className="border-b border-slate-700 xl:w-96 py-1 px-2 w-full" />
+                        <input type="text" name="clientEmail" id="clientEmail" className="border rounded-md border-slate-400 xl:w-96 py-2 px-2 w-full" />
                     </div>
 
                     <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
                         <label htmlFor='clientPhone' className='lg:mr-8' >Phone :</label>
-                        <input type="tel" name="clientPhone" id="clientPhone" className="border-b border-slate-700 xl:w-96 py-1  px-2 w-full" />
+                        <input type="tel" name="clientPhone" id="clientPhone" className="border rounded-md border-slate-400 xl:w-96 py-2  px-2 w-full" />
                     </div>
 
                     <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
                         <label htmlFor='clientAddress' className='lg:mr-8' >Address :</label>
-                        <input type="text" name="clientAddress" id="clientAddress" className="border-b border-slate-700 xl:w-96 py-1  px-2 w-full" />
+                        <input type="text" name="clientAddress" id="clientAddress" className="border rounded-md border-slate-400 xl:w-96 py-2  px-2 w-full" />
                     </div>
 
                     <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
                         <label htmlFor='clientDate' className='lg:mr-8' >Date :</label>
-                        <input type="date" name="clientDate" id="clientDate" className="border-b border-slate-700 xl:w-96 py-1  px-2 w-full" />
+                        <input type="date" name="clientDate" id="clientDate" className="border rounded-md border-slate-400 xl:w-96 py-2  px-2 w-full" />
                     </div>
 
                     <div className='flex flex-col xl:flex-row xl:items-center items-start xl:justify-between' >
                         <label className='lg:mr-8' >Message :</label>
-                        <textarea onChange={(e) => setClientMsg(e.target.value)} className="border-b border-slate-700 lg:w-96 w-[80%]  h-48 p-2" />
+                        <textarea onChange={(e) => setClientMsg(e.target.value)} className="border rounded-md border-slate-400 lg:w-96 w-[100%]  h-48 p-2" />
 
                     </div>
 
-                    <div className='flex justify-center mt-3'><button type='submit' className='bg-transparent px-7 py-2 rounded-md  font-display text-md flex items-center gap-2  border-2 border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >Connect </button></div>
+                    <div className='flex justify-center mt-3 lg:ml-24'><button type='submit' className='bg-transparent px-7 py-2 rounded-md  font-display text-md flex items-center gap-2  border-2 border-gray-400 hover:bg-main hover:border-main  hover:text-white transition-all' >Connect </button></div>
 
                 </form>
             </div>
