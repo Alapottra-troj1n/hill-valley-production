@@ -1,22 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { animate, motion } from "framer-motion"
 
 const Flims = () => {
 
-
+    const [currentPage, setCurrentPage] = useState('wedding');
 
     return (
         <motion.div
-        
-        initial={{
-            opacity: 0,
-           
-          }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
-        
-        
+
+            initial={{
+                opacity: 0,
+
+            }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
         >
+
+
+
+
+
+
+
+
+
 
             <div className='relative lg:h-[80vh] h-[20vh] w-full bg-black '>
                 <div className='z-10  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' role="status">
@@ -34,30 +41,67 @@ const Flims = () => {
             </div>
 
 
+
+
+
+
+
+
+            <div className='py-32  flex justify-center' >
+
+                <div className='grid grid-cols-4 lg:gap-20 gap-10 font-display lg:text-xl text-sm' >
+                    <div className='hover:text-main text-center'>
+                        <h2 onClick={() => setCurrentPage('wedding')} className={`cursor-pointer  transition-all border-b-2 ${currentPage === 'wedding' ? ' border-main' : 'border-white'}`} >WEDDING</h2>
+                    </div>
+                    <div className='hover:text-main text-center'>
+                        <h2 onClick={() => setCurrentPage('fashion')} className={`cursor-pointer transition-all border-b-2 ${currentPage === 'fashion' ? ' border-main' : 'border-white'} `} >FASHION</h2>
+                    </div>
+                    <div className='hover:text-main text-center' >
+                        <h2 onClick={() => setCurrentPage('food')} className={`cursor-pointer   transition-all border-b-2 ${currentPage === 'food' ? ' border-main' : 'border-white'}`} >FOOD</h2>
+                    </div>
+
+                    <div className='hover:text-main text-center' >
+                        <h2 onClick={() => setCurrentPage('documentary')} className={`cursor-pointer   transition-all border-b-2 ${currentPage === 'documentary' ? ' border-main' : 'border-white'}`} >DOCUMENTARY</h2>
+                    </div>
+               
+
+                </div>
+
+            </div>
+
+
+
+
+
             <div className='container mx-auto '>
-                <h2 className='text-center py-24 text-3xl lg:text-4xl font-display' >Featured Films</h2>
-             <div>
-             <div className="pb-32 grid grid-cols-1 lg:grid-cols-3 gap-10 px-6">
-                    <div className="w-full lg:h-96 h-72">
-                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/E-2XF3sTuyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div className="w-full lg:h-96 h-72">
-                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/-dVMNpamI-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div className="w-full lg:h-96 h-72">
-                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/oIhD1_t4JO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div className="w-full lg:h-96 h-72">
-                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/CNU1AP-nHOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div className="w-full lg:h-96 h-72">
-                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/1KTuT1OVh8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div className="w-full lg:h-96 h-72">
-                        <iframe className="w-full h-full" src="https://www.youtube.com/embed/LviLU7Fwuw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           
+                <div>
+                    <div className="pb-32 grid grid-cols-1 lg:grid-cols-3 gap-10 px-6">
+                        <div className="w-full lg:h-96 h-72">
+                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/UYuN55OKRWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div className="w-full lg:h-96 h-72">
+                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/E-2XF3sTuyU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div className="w-full lg:h-96 h-72">
+                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/-dVMNpamI-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div className="w-full lg:h-96 h-72">
+                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/oIhD1_t4JO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div className="w-full lg:h-96 h-72">
+                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/CNU1AP-nHOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div className="w-full lg:h-96 h-72">
+                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/1KTuT1OVh8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div className="w-full lg:h-96 h-72">
+                            <iframe className="w-full h-full" src="https://www.youtube.com/embed/LviLU7Fwuw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+
                     </div>
                 </div>
-             </div>
             </div>
 
         </motion.div>
