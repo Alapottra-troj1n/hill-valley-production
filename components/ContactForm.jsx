@@ -114,7 +114,7 @@ const ContactForm = () => {
 
                 <div className='flex justify-center items-center gap-2' >
                     <FaHandPointRight className='text-3xl text-main mr-3' />
-                    <h2 className='font-semibold flex gap-3 lg:gap-2 flex-col lg:flex-row items-start lg:items-center text-sm lg:text-base' >Let's talk on<a href='https://www.facebook.com/hvpweddings' target='_blank' rel="noreferrer"><BsFacebook className='text-2xl text-blue-500 hover:text-blue-700 transition-all' /></a> or simply call us on  <a className='font-semibold underline' href="tel:+8801889759000">+8801889759000</a> for bookings</h2>
+                    <h2 className='font-semibold flex gap-3 lg:gap-2 flex-col lg:flex-row items-start lg:items-center text-sm lg:text-base' >Let&apos;s talk on<a href='https://www.facebook.com/hvpweddings' target='_blank' rel="noreferrer"><BsFacebook className='text-2xl text-blue-500 hover:text-blue-700 transition-all' /></a> or simply call us on  <a className='font-semibold underline' href="tel:+8801889759000">+8801889759000</a> for bookings</h2>
                 </div>
 
 
