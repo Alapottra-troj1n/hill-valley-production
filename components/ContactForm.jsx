@@ -73,9 +73,9 @@ const ContactForm = () => {
                            </div>
 
                           <div >
-                          <h2 className='font-display font-semibold lg:text-2xl'>Connect with us on <span className='text-main hover:text-orange-400 transition-all' ><a href='https://www.facebook.com/hvpweddings' target='_blank' rel="noreferrer">Facebook</a></span></h2>
-                          <h2 className=' font-semibold lg:text-3xl lg:my-3 text-main'>-</h2>
-                          <h2 className='font-display font-semibold lg:text-2xl'>Simply call us on <span className='text-main hover:text-orange-400 transition-all'><a href="tel:+8801889759000">+8801889759000</a></span> </h2>
+                          <h2 className='font-display font-semibold lg:text-2xl'>Connect with us on <span className='text-main hover:text-orange-400 transition-all' ><a href='https://www.facebook.com/hvpweddings' target='_blank' rel="noreferrer">Facebook</a></span> </h2>
+                         
+                          <h2 className='font-display font-semibold lg:text-2xl my-5'>or Simply call us on <span className='text-main hover:text-orange-400 transition-all'><a href="tel:+8801889759000">+8801889759000</a></span> </h2>
                           </div>
                     </div>
 

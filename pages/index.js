@@ -184,7 +184,9 @@ export default function Home({ posts }) {
       {/************* 6TH SECTION *************/}
 
 
-      <ContactForm />
+     <div className='mt-10'>
+     <ContactForm />
+     </div>
 
 
       {/************* 7TH SECTION *************/}
