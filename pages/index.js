@@ -29,17 +29,13 @@ export default function Home({ posts }) {
       setVideoBg(<>
         <div className="relative h-[100vh]" >
 
-          <Image src={'/4bg_mobile_opa.jpg'} objectFit='cover' objectPosition='center' layout="fill" />
+          <Image src={'/4bg_mobile.jpg'} objectFit='cover' objectPosition='center' layout="fill" />
           
-         <div className="absolute  top-[37%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-         <div className="cursor-pointer text-xl relative lg:w-[221px] lg:h-[104px] w-52 h-16 ">
-            <Image alt='logo' src={'/logo_white.png'} layout="fill" objectFit='cover' />
-          </div>
-         </div>
+       
           
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" >
        
-            <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
+            <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg font-display lg:text-lg text-sm flex items-center gap-2 border-white border-[2px] bg-white text-black hover:bg-transparent hover:text-white transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
             </Link>
           </div>
         </div>
