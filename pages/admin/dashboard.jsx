@@ -6,12 +6,7 @@ import ManagePackages from '../../components/AdminDashboard/ManagePackages';
 import ManagePost from '../../components/AdminDashboard/ManagePost';
 import Responses from '../../components/AdminDashboard/Responses';
 import connectDb from '../../lib/connectDb'
-const Dashboard = ({allPosts,allResponses,
-
-    homepage1, homepage2, homepage3, homepage4, homepage5,
-    setHomepage1, setHomepage2, setHomepage3, setHomepage4, setHomepage5
-
-
+const Dashboard = ({allPosts,allResponses
 }) => {
 
    const [adminOption, setAdminOption] = useState('ManagePosts');
@@ -42,14 +37,7 @@ const Dashboard = ({allPosts,allResponses,
                      {adminOption === 'addPost' && <AddPost setAdminOption={setAdminOption} setPosts={setPosts} posts={posts} />}
                      {adminOption === 'SeeResponses' && <Responses response={response} setResponse={setResponse} />}
                      {adminOption === 'ManagePackages' && <ManagePackages/>}
-                     {adminOption === 'ManageHomepage' && <ManageHomepage
-
-                        homepage1={homepage1} homepage2={homepage2} homepage3={homepage3} homepage4={homepage4} homepage5={homepage5}
-                        
-                        setHomepage1={setHomepage1} setHomepage2={setHomepage2} setHomepage3={setHomepage3} setHomepage4={setHomepage4} setHomepage5={setHomepage5}
-                     
-
-                     />}
+                     {adminOption === 'ManageHomepage' && <ManageHomepage />}
                     
 
 

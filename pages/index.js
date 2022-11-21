@@ -10,11 +10,17 @@ import { isMobile } from 'react-device-detect';
 import { useEffect, useState } from 'react';
 import { animate, motion } from "framer-motion"
 
-export default function Home({ posts, homepage1, homepage2, homepage3, homepage4, homepage5 }) {
+export default function Home({ posts }) {
 
 
   const [hero, setHero] = useState('');
-  const [videoBg, setVideoBg] = useState('')
+  const [videoBg, setVideoBg] = useState('');
+  const [homepage1, setHomepage1] = useState('https://i.ibb.co/HzjVr1T/homepage1.jpg')
+  const [homepage2, setHomepage2] = useState('https://i.ibb.co/Fhj1wFM/homepage2.jpg')
+  const [homepage3, setHomepage3] = useState('https://i.ibb.co/0Z9nhP1/homepage3.jpg')
+  const [homepage4, setHomepage4] = useState('https://i.ibb.co/r3r8X9c/homepage4.jpg')
+  const [homepage5, setHomepage5] = useState('https://i.ibb.co/7R87dDd/homepage5.jpg')
+
 
   useEffect(() => {
     if (isMobile) {
