@@ -37,24 +37,17 @@ const Photography = ({posts}) => {
  
 
     return (
-        <motion.div
-        initial={{
-            opacity: 0,
-
-          }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
-        >
+        <div className="overflow-hidden" >
     
 
             <motion.div className='bg-slate-300 relative h-[80vh] w-full'
              key={bg}
             initial={{
-                opacity: 0,
+                y: -4000,
     
               }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.7, ease: 'easeOut' }}
+              animate={{ y: -0 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
             
             >
                 <Image priority={true} src={bg} alt='photography-bg' layout='fill' objectFit='cover' objectPosition={'center'}/>
@@ -90,7 +83,7 @@ const Photography = ({posts}) => {
             </div>
 
 
-        </motion.div>
+        </div>
     );
 };
 

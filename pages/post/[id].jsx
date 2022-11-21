@@ -25,16 +25,7 @@ const Post = ({ data }) => {
     }, [])
 
     return (
-        <motion.div className="text-white " 
-        
-        initial={{
-            opacity: 0,
-
-          }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
-
-        >
+        <div className="text-white " >
             { postBg }
 
             <div className='py-24 container mx-auto text-slate-500 font-normal font-type  lg:px-40  px-4'>
@@ -122,7 +113,7 @@ const Post = ({ data }) => {
 
 
 
-        </motion.div>
+        </div>
     );
 };
 

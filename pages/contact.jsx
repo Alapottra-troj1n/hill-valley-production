@@ -24,18 +24,7 @@ const Contact = () => {
 
 
     return (
-        <motion.div
-        
-         
-        initial={{
-            opacity: 0,
-
-          }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
-
-        
-        >
+        <div>
             <div className="bg-slate-300" >
                 {hero}
             </div>
@@ -43,7 +32,7 @@ const Contact = () => {
                 <ContactForm />
             </div>
 
-        </motion.div>
+        </div>
     );
 };
 

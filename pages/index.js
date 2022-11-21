@@ -36,7 +36,7 @@ export default function Home({ posts, homepage1, homepage2, homepage3, homepage4
       </div>)
 
 
-      setVideoBg(<div className={styles.secondBg} >
+      setVideoBg(<div  className={styles.secondBg} >
 
         <div className='flex justify-center flex-col gap-4 items-center h-full' >
           <div className="cursor-pointer text-xl relative lg:w-[221px] lg:h-[104px] w-36 h-16 ">
@@ -57,19 +57,7 @@ export default function Home({ posts, homepage1, homepage2, homepage3, homepage4
 
 
   return (
-    <motion.div className="text-slate-600"
-
-      initial={{
-        opacity: 0,
-
-      }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 0.7, ease: 'easeOut' }}
-
-      exit={{ y: -200, opacity: 0, transition: { delay: 0.5, duration: 0.7, ease: 'easeOut' } }}
-
-
-    >
+    <div className="text-slate-600">
 
       <Head>
         <title>Hill Valley Production</title>
@@ -198,7 +186,7 @@ export default function Home({ posts, homepage1, homepage2, homepage3, homepage4
 
 
 
-    </motion.div>
+    </div>
 
 
 
