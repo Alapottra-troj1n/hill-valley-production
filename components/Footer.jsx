@@ -34,8 +34,8 @@ const Footer = () => {
 
                 <div className="flex flex-col items-center gap-5" >
 
-                    <div className="cursor-pointer text-xl relative lg:w-[221px] lg:h-[104px] w-36 h-16 ">
-                        <Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' />
+                    <div className="cursor-pointer text-xl relative lg:w-[271px] lg:h-[104px] w-40 h-16 ">
+                        <Image alt='logo' src={'/logo_white.png'} layout="fill" objectFit='cover' />
                     </div>
                     <p className='lg:text-sm font-type text-center text-xs px-5 leading-4 lg:px-[20%]' >When you acquire an understanding of the science behind light and what governs it, then you can  predict its behavior and control the lighting in photographs.</p>
 
