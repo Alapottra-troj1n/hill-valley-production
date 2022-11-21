@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import '../styles/globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import { useState } from 'react';
 import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
@@ -24,7 +23,7 @@ function MyApp({ Component, pageProps }) {
           property="og:title"
           content="Hill Valley Production" />
         <meta name="description" content="A team of young passionate photographer and cinematographer based in CHT Bangladesh." />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
 

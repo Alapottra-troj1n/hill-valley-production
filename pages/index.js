@@ -72,7 +72,7 @@ export default function Home({ posts }) {
           property="og:title"
           content="Hill Valley Production" />
         <meta name="description" content="A team of young passionate photographer and cinematographer based in CHT Bangladesh." />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
 
