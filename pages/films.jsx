@@ -54,11 +54,6 @@ const Flims = ({ allFlims }) => {
 
 
 
-
-
-
-
-
             <div className='py-32  flex justify-center' >
 
                 <div className='grid grid-cols-4 lg:gap-20 font-display lg:text-xl text-xs' >

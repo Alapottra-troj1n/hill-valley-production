@@ -30,7 +30,15 @@ export default function Home({ posts }) {
         <div className="relative h-[100vh]" >
 
           <Image src={'/4bg_mobile_opa.jpg'} objectFit='cover' objectPosition='center' layout="fill" />
+          
+         <div className="absolute  top-[37%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+         <div className="cursor-pointer text-xl relative lg:w-[221px] lg:h-[104px] w-52 h-16 ">
+            <Image alt='logo' src={'/logo_white.png'} layout="fill" objectFit='cover' />
+          </div>
+         </div>
+          
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" >
+       
             <Link href={'/films'} ><button className='bg-transparent px-5 lg:px-7 py-3 rounded-lg  font-display text-white lg:text-lg text-sm flex items-center gap-2 border-white border-[1px] hover:bg-white hover:text-black transition-all' >VIEW VIDEOS <MdArrowForwardIos className='text-sm' /> </button>
             </Link>
           </div>
@@ -45,8 +53,8 @@ export default function Home({ posts }) {
       setVideoBg(<div  className={styles.secondBg} >
 
         <div className='flex justify-center flex-col gap-4 items-center h-full' >
-          <div className="cursor-pointer text-xl relative lg:w-[221px] lg:h-[104px] w-36 h-16 ">
-            <Image alt='logo' src={'/Logo.png'} layout="fill" objectFit='cover' />
+          <div className="cursor-pointer text-xl relative lg:w-[290px] lg:h-[104px] w-36 h-16 ">
+            <Image alt='logo' src={'/logo_white.png'} layout="fill" objectFit='cover' />
           </div>
           <div className='flex justify-center items-center' >
 
