@@ -56,7 +56,7 @@ const Flims = ({ allFlims }) => {
 
             <div className='py-32  flex justify-center' >
 
-                <div className='grid grid-cols-4 lg:gap-20 font-display lg:text-xl text-xs' >
+                <div className='grid lg:grid-cols-4 gap-5 lg:gap-20 font-display lg:text-xl text-sm' >
                     <div className='hover:text-main text-center'>
                         <h2 onClick={() => setCurrentPage('music')} className={`cursor-pointer  transition-all border-b-2 ${currentPage === 'music' ? ' border-main' : 'border-white'}`} >MUSIC VIDEO</h2>
                     </div>
