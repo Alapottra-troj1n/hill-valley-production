@@ -5,7 +5,7 @@ import connectDb from '../lib/connectDb';
 import FilmComponent from '../components/Films/FilmComponent';
 const Flims = ({ allFlims }) => {
 
-    const [currentPage, setCurrentPage] = useState('music');
+    const [currentPage, setCurrentPage] = useState('wedding');
 
     const [musicVideos, setMusicVideos] = useState();
     const [wedding, setWedding] = useState();
@@ -56,15 +56,12 @@ const Flims = ({ allFlims }) => {
 
             <div className='py-32  flex justify-center' >
 
-                <div className='grid lg:grid-cols-4 gap-5 lg:gap-20 font-display lg:text-xl text-sm' >
+                <div className='grid grid-cols-3 gap-5 lg:gap-20 font-display lg:text-xl text-sm' >
                     <div className='hover:text-main text-center'>
                         <h2 onClick={() => setCurrentPage('music')} className={`cursor-pointer  transition-all border-b-2 ${currentPage === 'music' ? ' border-main' : 'border-white'}`} >MUSIC VIDEO</h2>
                     </div>
                     <div className='hover:text-main text-center'>
                         <h2 onClick={() => setCurrentPage('wedding')} className={`cursor-pointer transition-all border-b-2 ${currentPage === 'wedding' ? ' border-main' : 'border-white'} `} >WEDDING</h2>
-                    </div>
-                    <div className='hover:text-main text-center' >
-                        <h2 onClick={() => setCurrentPage('fashion')} className={`cursor-pointer   transition-all border-b-2 ${currentPage === 'fashion' ? ' border-main' : 'border-white'}`} >FASHION</h2>
                     </div>
 
                     <div className='hover:text-main text-center' >

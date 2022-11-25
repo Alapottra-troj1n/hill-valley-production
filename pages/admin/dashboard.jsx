@@ -6,7 +6,7 @@ import ManagePackages from '../../components/AdminDashboard/ManagePackages';
 import ManagePost from '../../components/AdminDashboard/ManagePost';
 import Responses from '../../components/AdminDashboard/Responses';
 import connectDb from '../../lib/connectDb'
-const Dashboard = ({allPosts,allResponses
+const Dashboard = ({allPosts,allResponses,section2
 }) => {
 
    const [adminOption, setAdminOption] = useState('ManagePosts');
@@ -37,7 +37,7 @@ const Dashboard = ({allPosts,allResponses
                      {adminOption === 'addPost' && <AddPost setAdminOption={setAdminOption} setPosts={setPosts} posts={posts} />}
                      {adminOption === 'SeeResponses' && <Responses response={response} setResponse={setResponse} />}
                      {adminOption === 'ManagePackages' && <ManagePackages/>}
-                     {adminOption === 'ManageHomepage' && <ManageHomepage />}
+                     {adminOption === 'ManageHomepage' && <ManageHomepage section2={section2} />}
                     
 
 
@@ -63,10 +63,9 @@ export async function getServerSideProps(context) {
     const db = await connectDb();
     const allPosts = await db.collection("posts").find({}).toArray();
     const allResponses = await db.collection("responses").find({}).toArray();
-  
-  
+    const section2 = await db.collection("homepageLinks").find({name: "section2"}).toArray();
   
     return {
-      props: { allPosts: JSON.parse(JSON.stringify(allPosts)),allResponses: JSON.parse(JSON.stringify(allResponses)) },
+      props: { allPosts: JSON.parse(JSON.stringify(allPosts)),allResponses: JSON.parse(JSON.stringify(allResponses)),section2: JSON.parse(JSON.stringify(section2[0])) },
     }
   }

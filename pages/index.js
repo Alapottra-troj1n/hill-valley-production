@@ -10,16 +10,17 @@ import { isMobile } from 'react-device-detect';
 import { useEffect, useState } from 'react';
 import { animate, motion } from "framer-motion"
 
-export default function Home({ posts }) {
+export default function Home({ posts,section2 }) {
 
 
   const [hero, setHero] = useState('');
   const [videoBg, setVideoBg] = useState('');
-  const [homepage1, setHomepage1] = useState('https://i.ibb.co/HzjVr1T/homepage1.jpg')
-  const [homepage2, setHomepage2] = useState('https://i.ibb.co/Fhj1wFM/homepage2.jpg')
-  const [homepage3, setHomepage3] = useState('https://i.ibb.co/0Z9nhP1/homepage3.jpg')
-  const [homepage4, setHomepage4] = useState('https://i.ibb.co/r3r8X9c/homepage4.jpg')
-  const [homepage5, setHomepage5] = useState('https://i.ibb.co/7R87dDd/homepage5.jpg')
+  const [homepage1, setHomepage1] = useState('')
+  const [homepage2, setHomepage2] = useState('')
+  const [homepage3, setHomepage3] = useState('')
+  const [homepage4, setHomepage4] = useState('')
+  const [homepage5, setHomepage5] = useState('')
+
 
 
   useEffect(() => {
@@ -61,6 +62,13 @@ export default function Home({ posts }) {
 
       </div>)
     }
+
+
+    setHomepage1(section2.image1)
+    setHomepage2(section2.image2)
+    setHomepage3(section2.image3)
+    setHomepage4(section2.image4)
+    setHomepage5(section2.image5)
 
   }, [])
 
@@ -210,16 +218,17 @@ export default function Home({ posts }) {
 
 
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
 
 
   const db = await connectDb();
   const allPosts = await db.collection("posts").find({}).limit(4).toArray();
+  const section2 = await db.collection("homepageLinks").find({name: "section2"}).toArray();
+
 
 
 
   return {
-    props: { posts: JSON.parse(JSON.stringify(allPosts)) },
-    revalidate: 7200,
+    props: { posts: JSON.parse(JSON.stringify(allPosts)),section2: JSON.parse(JSON.stringify(section2[0])) },
   }
 }
