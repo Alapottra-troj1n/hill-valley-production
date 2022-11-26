@@ -157,7 +157,7 @@ export default function Home({ posts, section2 }) {
             <div>
               <h2 className='lg:text-3xl text-xl text-center font-display font-semibold ' >PHOTOGRAPHY</h2>
 
-              <p className='font-type text-xs lg:text-md font-medium text-gray-400 mt-5 px-20 leading-8'>We provide the most premium and fully customizable Photography services. Our photography services include <b className='text-main'>Wedding</b>, <b className='text-main'>Fashion</b>, <b className='text-main'>Product</b>, <b className='text-main'>Birthday</b>, <b className='text-main'>Corporate Events</b> & <b className='text-main'>Headshots</b> etc. 
+              <p className='font-type text-xs lg:text-md font-medium text-gray-400 mt-5 px-20 leading-8'>We provide the most premium and fully customizable Photography services. Our photography services include <b className='text-main'>Wedding</b>, <b className='text-main'>Fashion</b>, <b className='text-main'>Product</b>, <b className='text-main'>Birthday</b>, <b className='text-main'>Corporate Events</b>, <b className='text-main'>Headshots</b> etc. 
               
               </p>
 
