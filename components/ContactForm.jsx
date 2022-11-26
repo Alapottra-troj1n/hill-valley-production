@@ -61,7 +61,8 @@ const ContactForm = () => {
 
 
 
-            <h2 className='font-display text-3xl mb-10 lg:mb-20 lg:text-5xl text-center' >Contact us</h2>
+            <h2 className='font-display text-3xl  lg:text-5xl text-center' >Contact us</h2>
+            <div className='border-b-2 mt-7 lg:mb-20 w-[5%] mx-auto border-main' ></div>
 
 
 
