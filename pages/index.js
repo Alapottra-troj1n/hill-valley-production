@@ -95,7 +95,7 @@ export default function Home({ posts, section2 }) {
 
         <h2 className='font-display text-center text-3xl lg:text-5xl' >About Us</h2>
         <div className='border-b-2 mt-7 w-[20%] mx-auto border-main' ></div>
-        <p className='mt-11 text-xs lg:text-lg px-4 lg:px-0 leading-6 lg:leading-10' >We are a team of young and passionate people determined to capture the essence of life through our lenses. Since 2016 we have been perfecting our photography and cinematography. The art of photography is not just about picking up a camera and taking photos. It is about bringing life to the pictures, it is about capturing the beauty of life.</p>
+        <p className='mt-8 text-xs lg:text-lg px-4 lg:px-0 leading-6 lg:leading-10' >We are a team of young and passionate people determined to capture the essence of life through our lenses. Since 2016 we have been perfecting our photography and cinematography. The art of photography is not just about picking up a camera and taking photos. It is about bringing life to the pictures, it is about capturing the beauty of life.</p>
 
 
 
