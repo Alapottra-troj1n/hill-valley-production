@@ -15,11 +15,11 @@ export default function Home({ posts, section2 }) {
 
   const [hero, setHero] = useState('');
   const [videoBg, setVideoBg] = useState('');
-  const [homepage1, setHomepage1] = useState('')
-  const [homepage2, setHomepage2] = useState('')
-  const [homepage3, setHomepage3] = useState('')
-  const [homepage4, setHomepage4] = useState('')
-  const [homepage5, setHomepage5] = useState('')
+  const [homepage1, setHomepage1] = useState(section2.image1)
+  const [homepage2, setHomepage2] = useState(section2.image2)
+  const [homepage3, setHomepage3] = useState(section2.image3)
+  const [homepage4, setHomepage4] = useState(section2.image4)
+  const [homepage5, setHomepage5] = useState(section2.image5)
 
 
 
@@ -63,12 +63,6 @@ export default function Home({ posts, section2 }) {
       </div>)
     }
 
-
-    setHomepage1(section2.image1)
-    setHomepage2(section2.image2)
-    setHomepage3(section2.image3)
-    setHomepage4(section2.image4)
-    setHomepage5(section2.image5)
 
   }, [])
 
@@ -157,7 +151,7 @@ export default function Home({ posts, section2 }) {
             <div>
               <h2 className='lg:text-3xl text-xl text-center font-display font-semibold ' >PHOTOGRAPHY</h2>
 
-              <p className='font-type text-xs lg:text-md font-medium text-gray-400 mt-5 px-20 leading-8'>We provide the most premium and fully customizable Photography services. Our photography services include <b className='text-main'>Wedding</b>, <b className='text-main'>Fashion</b>, <b className='text-main'>Product</b>, <b className='text-main'>Birthday</b>, <b className='text-main'>Corporate Events</b>, <b className='text-main'>Headshots</b> etc. 
+              <p className='font-type text-xs lg:text-md font-medium text-gray-400 mt-5 px-20 leading-8'>We provide the most premium and fully customizable Photography services. Our photography services include <span className='text-main'>Wedding</span>, <span className='text-main'>Fashion</span>, <span className='text-main'>Product</span>, <span className='text-main'>Birthday</span>, <span className='text-main'>Corporate Events</span>, <span className='text-main'>Headshots</span> etc. 
               
               </p>
 
@@ -171,7 +165,7 @@ export default function Home({ posts, section2 }) {
             </div>
             <div>
               <h2 className='lg:text-3xl text-xl font-display font-semibold text-center' >CINEMATOGRAPHY</h2>
-              <p className='font-type text-xs font-medium lg:text-md text-gray-400 mt-5 px-20 leading-8'>Our expert team of Cinematographers and Film-Makers will provide the most premium Cinematography services at a budget-friendly pricing. Cinematography services include <b className='text-main'>Wedding</b>, <b className='text-main'>Fashion</b>, <b className='text-main'>Commercial</b>, <b className='text-main'>Documentary</b>, <b className='text-main'>Music Videos</b> etc. 
+              <p className='font-type text-xs font-medium lg:text-md text-gray-400 mt-5 px-20 leading-8'>Our expert team of Cinematographers and Film-Makers will provide the most premium Cinematography services at a budget-friendly pricing. Cinematography services include <span className='text-main'>Wedding</span>, <span className='text-main'>Fashion</span>, <span className='text-main'>Commercial</span>, <span className='text-main'>Documentary</span>, <span className='text-main'>Music Videos</span> etc. 
               
               </p>
             </div>
