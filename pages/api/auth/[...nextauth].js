@@ -16,7 +16,6 @@ export default NextAuth({
 
                 const db = await connectDb();
                 const user = await db.collection('admin').find({ name: username, password: password }).toArray();
-                console.log(user);
                 if (user.length > 0) {
                     const loggedUser = user[0];
 

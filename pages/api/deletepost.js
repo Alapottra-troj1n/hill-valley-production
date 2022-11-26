@@ -1,8 +1,11 @@
 import connectDb from "../../lib/connectDb";
 var ObjectId = require('mongodb').ObjectID;
+import { getSession } from 'next-auth/react';
 
 export default async function handler(req, res) {
-    if (req.method == "DELETE") {
+    const session = await getSession({req});
+
+    if (req.method == "DELETE" && session) {
 
 
      try{
