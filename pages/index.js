@@ -164,7 +164,7 @@ export default function Home({ posts, section2 }) {
             </div>
             <div>
               <h2 className='lg:text-3xl text-xl font-display font-semibold text-center' >CINEMATOGRAPHY</h2>
-              <p className='font-type text-xs  lg:text-lg text-gray-400 mt-5 px-20 leading-6 lg:leading-8'>Our expert team of Cinematographers and Film-Makers will provide the most premium Cinematography services at a budget-friendly pricing. Cinematography services include <span className='text-main font-semibold'>Wedding</span>, <span className='text-main font-semibold'>Fashion</span>, <span className='text-main font-semibold'>Commercial</span>, <span className='text-main font-semibold'>Documentary</span>, <span className='text-main font-semibold'>Music Videos</span> etc. 
+              <p className='font-type text-xs  lg:text-lg text-gray-400 mt-5 px-20 leading-6 lg:leading-8'>Our expert team of Cinematographers will provide the most premium Cinematography services which includes <span className='text-main font-semibold'>Wedding</span>, <span className='text-main font-semibold'>Fashion</span>, <span className='text-main font-semibold'>Commercial</span>, <span className='text-main font-semibold'>Documentary</span>, <span className='text-main font-semibold'>Music Videos</span> etc. 
               
               </p>
             </div>

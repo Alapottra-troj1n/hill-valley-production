@@ -41,7 +41,7 @@ const Admin = () => {
     return (
         <div className='lg:pt-60 lg:pb-52 pt-40 flex justify-center items-center' >
             <div className="card w-96 bg-gray-800 shadow-xl py-10">
-                <figure><img src="/Logo.png" alt="Shoes" /></figure>
+                <figure><img src="/logo_white.png" className='w-52' alt="Shoes" /></figure>
 
                 <form className="card-body gap-4" onSubmit={handleSubmit} >
                     <input type="text" placeholder="Username" name="username" className="input input-bordered w-full max-w-xs" />
