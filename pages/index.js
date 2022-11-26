@@ -150,7 +150,7 @@ export default function Home({ posts, section2 }) {
             <div>
               <h2 className='lg:text-3xl text-xl text-center font-display font-semibold ' >PHOTOGRAPHY</h2>
 
-              <p className='font-type text-xs lg:text-md font-medium text-gray-400 mt-5 px-20 leading-8'>We provide the most premium and fully customizable Photography services. Our photography services include <span className='text-main'>Wedding</span>, <span className='text-main'>Fashion</span>, <span className='text-main'>Product</span>, <span className='text-main'>Birthday</span>, <span className='text-main'>Corporate Events</span>, <span className='text-main'>Headshots</span> etc. 
+              <p className='font-type text-xs lg:text-lg  text-gray-400 mt-5 px-20 leading-6 lg:leading-8'>We provide the most premium and fully customizable Photography services. Our photography services include <span className='text-main font-semibold'>Wedding</span>, <span className='text-main font-semibold'>Fashion</span>, <span className='text-main font-semibold'>Product</span>, <span className='text-main font-semibold'>Birthday</span>, <span className='text-main font-semibold'>Corporate Events</span>, <span className='text-main font-semibold'>Headshots</span> etc. 
               
               </p>
 
@@ -164,7 +164,7 @@ export default function Home({ posts, section2 }) {
             </div>
             <div>
               <h2 className='lg:text-3xl text-xl font-display font-semibold text-center' >CINEMATOGRAPHY</h2>
-              <p className='font-type text-xs font-medium lg:text-md text-gray-400 mt-5 px-20 leading-8'>Our expert team of Cinematographers and Film-Makers will provide the most premium Cinematography services at a budget-friendly pricing. Cinematography services include <span className='text-main'>Wedding</span>, <span className='text-main'>Fashion</span>, <span className='text-main'>Commercial</span>, <span className='text-main'>Documentary</span>, <span className='text-main'>Music Videos</span> etc. 
+              <p className='font-type text-xs  lg:text-lg text-gray-400 mt-5 px-20 leading-6 lg:leading-8'>Our expert team of Cinematographers and Film-Makers will provide the most premium Cinematography services at a budget-friendly pricing. Cinematography services include <span className='text-main font-semibold'>Wedding</span>, <span className='text-main font-semibold'>Fashion</span>, <span className='text-main font-semibold'>Commercial</span>, <span className='text-main font-semibold'>Documentary</span>, <span className='text-main font-semibold'>Music Videos</span> etc. 
               
               </p>
             </div>
