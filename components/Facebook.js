@@ -6,7 +6,7 @@ function Facebook() {
       <div id="fb-root"></div>
 
       <div id="fb-customer-chat" className="fb-customerchat"></div>
-      <Script strategy="lazyOnload">
+      <Script id='chatPlugin' strategy="lazyOnload">
         {`
             var chatbox = document.getElementById('fb-customer-chat');
             chatbox.setAttribute("page_id", "100044432706390");
