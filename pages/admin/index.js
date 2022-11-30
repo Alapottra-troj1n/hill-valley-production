@@ -35,9 +35,6 @@ const Admin = () => {
     }
 
 
-
-
-
     return (
         <div className='lg:pt-60 lg:pb-52 pt-40 flex justify-center items-center' >
             <div className="card w-96 bg-gray-800 shadow-xl py-10">
