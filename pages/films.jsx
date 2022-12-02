@@ -15,7 +15,7 @@ const Flims = ({ allFlims }) => {
 
     useEffect(() => {
         const music = allFlims.filter(item => item.category === 'music');
-        const wedding = allFlims.filter(item => item.category === 'music');
+        const wedding = allFlims.filter(item => item.category === 'wedding');
         const documentary = allFlims.filter(item => item.category === 'documentary');
         setMusicVideos(music);
         setWedding(wedding);
