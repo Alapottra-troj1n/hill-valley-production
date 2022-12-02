@@ -8,18 +8,18 @@ const FilmComponent = ({films}) => {
 
 
             
-            {  films?.map(music =>
+            {  films?.map(video =>
                 (
 
-                    <div key={music._id} className="w-full lg:h-96 h-72">
-                        <iframe className="w-full h-full" src={music?.link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div key={video._id} className="w-full lg:h-96 h-72">
+                        <iframe className="w-full h-full" src={video?.link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 
                 )
 
                 )
                 
-                }
+             }
              
 
 

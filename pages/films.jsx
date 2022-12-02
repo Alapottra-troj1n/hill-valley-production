@@ -15,7 +15,11 @@ const Flims = ({ allFlims }) => {
 
     useEffect(() => {
         const music = allFlims.filter(item => item.category === 'music');
+        const wedding = allFlims.filter(item => item.category === 'music');
+        const documentary = allFlims.filter(item => item.category === 'documentary');
         setMusicVideos(music);
+        setWedding(wedding);
+        setDocumentary(documentary)
 
 
     }, [])
@@ -65,7 +69,7 @@ const Flims = ({ allFlims }) => {
                     </div>
 
                     <div className='hover:text-main text-center' >
-                        <h2 onClick={() => setCurrentPage('documentary')} className={`cursor-pointer   transition-all border-b-2 ${currentPage === 'documentary' ? ' border-main' : 'border-white'}`} >DOCUMENTARY</h2>
+                        <h2 onClick={() => setCurrentPage('documentary')} className={`cursor-pointer   transition-all border-b-2 ${currentPage === 'documentary' ? ' border-main' : 'border-white'}`} >COMMERCIAL</h2>
                     </div>
 
 
