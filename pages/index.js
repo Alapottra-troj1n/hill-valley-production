@@ -69,24 +69,26 @@ export default function Home({ posts, section2 }) {
 
   return (
     <div className="text-slate-600">
+      <>
+        <Head>
+          <title>Hill Valley Production</title>
+          <meta property="og:image" content={"/couple3.jpg"} />
+          <meta
+            property="og:title"
+            content="Hill Valley Production" />
+          <meta name="description" content="A team of young passionate photographer and cinematographer based in CHT Bangladesh." />
+          <link rel="icon" href="/favicon.png" />
 
-      <Head>
-        <title>Hill Valley Production</title>
-        <meta property="og:image" content={"/couple3.jpg"} />
-        <meta
-          property="og:title"
-          content="Hill Valley Production" />
-        <meta name="description" content="A team of young passionate photographer and cinematographer based in CHT Bangladesh." />
-        <link rel="icon" href="/favicon.png" />
+        </Head>
         <Script
-            id="Adsense-id"
-            data-ad-client="ca-pub-1915872321700904"
-            async="true"
-            strategy="beforeInteractive"
-            crossorigin="anonymous"
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          />
-      </Head>
+          id="Adsense-id"
+          data-ad-client="ca-pub-1915872321700904"
+          async="true"
+          strategy="beforeInteractive"
+          crossorigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+      </>
 
 
 
@@ -153,13 +155,13 @@ export default function Home({ posts, section2 }) {
         <div className='grid grid-cols-1 lg:grid-cols-2' >
           <div className='flex  flex-col items-center gap-10 mt-20' >
             <div className='relative w-[350px] h-[350px]'>
-            <Image layout='fill' objectFit='cover' alt='photography' src={'/services/photography.svg'}/>
+              <Image layout='fill' objectFit='cover' alt='photography' src={'/services/photography.svg'} />
             </div>
             <div>
               <h2 className='lg:text-3xl text-xl text-center font-display font-semibold ' >PHOTOGRAPHY</h2>
 
-              <p className='font-type text-xs lg:text-lg  text-gray-400 mt-5 px-20 leading-6 lg:leading-8'>We provide the most premium and fully customizable Photography services. Our photography services include <span className='text-main font-semibold'>Wedding</span>, <span className='text-main font-semibold'>Fashion</span>, <span className='text-main font-semibold'>Product</span>, <span className='text-main font-semibold'>Birthday</span>, <span className='text-main font-semibold'>Corporate Events</span>, <span className='text-main font-semibold'>Headshots</span> etc. 
-              
+              <p className='font-type text-xs lg:text-lg  text-gray-400 mt-5 px-20 leading-6 lg:leading-8'>We provide the most premium and fully customizable Photography services. Our photography services include <span className='text-main font-semibold'>Wedding</span>, <span className='text-main font-semibold'>Fashion</span>, <span className='text-main font-semibold'>Product</span>, <span className='text-main font-semibold'>Birthday</span>, <span className='text-main font-semibold'>Corporate Events</span>, <span className='text-main font-semibold'>Headshots</span> etc.
+
               </p>
 
             </div>
@@ -167,13 +169,13 @@ export default function Home({ posts, section2 }) {
 
           <div className='flex flex-col items-center gap-10 mt-20' >
             <div className='relative w-[350px] h-[350px]'>
-            <Image layout='fill' objectFit='cover' alt='photography' src={'/services/cinematography.svg'}/>
-           
+              <Image layout='fill' objectFit='cover' alt='photography' src={'/services/cinematography.svg'} />
+
             </div>
             <div>
               <h2 className='lg:text-3xl text-xl font-display font-semibold text-center' >CINEMATOGRAPHY</h2>
-              <p className='font-type text-xs  lg:text-lg text-gray-400 mt-5 px-20 leading-6 lg:leading-8'>Our expert team of Cinematographers will provide the most premium Cinematography services which includes <span className='text-main font-semibold'>Wedding</span>, <span className='text-main font-semibold'>Fashion</span>, <span className='text-main font-semibold'>Commercial</span>, <span className='text-main font-semibold'>Documentary</span>, <span className='text-main font-semibold'>Music Videos</span> etc. 
-              
+              <p className='font-type text-xs  lg:text-lg text-gray-400 mt-5 px-20 leading-6 lg:leading-8'>Our expert team of Cinematographers will provide the most premium Cinematography services which includes <span className='text-main font-semibold'>Wedding</span>, <span className='text-main font-semibold'>Fashion</span>, <span className='text-main font-semibold'>Commercial</span>, <span className='text-main font-semibold'>Documentary</span>, <span className='text-main font-semibold'>Music Videos</span> etc.
+
               </p>
             </div>
           </div>
