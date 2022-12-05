@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-       <Head>
+      <Head>
         <title>Hill Valley Production</title>
         <meta property="og:image" content={"/couple3.jpg"} />
         <meta
@@ -32,9 +32,18 @@ function MyApp({ Component, pageProps }) {
         <AuthWrapper>
           <Navbar />
           <Component {...pageProps} />
+          <Script
+            id="Adsense-id"
+            data-ad-client="ca-pub-1915872321700904"
+            async="true"
+            strategy="beforeInteractive"
+            crossorigin="anonymous"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          />
           <ToastContainer />
           <Footer />
-          <Facebook/>
+          <Facebook />
+        
         </AuthWrapper>
       </SessionProvider>
     </>)
