@@ -25,14 +25,7 @@ function MyApp({ Component, pageProps }) {
           content="Hill Valley Production" />
         <meta name="description" content="A team of young passionate photographer and cinematographer based in CHT Bangladesh." />
         <link rel="icon" href="/favicon.png" />
-      </Head>
-
-
-      <SessionProvider session={pageProps.session} >
-        <AuthWrapper>
-          <Navbar />
-          <Component {...pageProps} />
-          <Script
+        <Script
             id="Adsense-id"
             data-ad-client="ca-pub-1915872321700904"
             async="true"
@@ -40,6 +33,13 @@ function MyApp({ Component, pageProps }) {
             crossorigin="anonymous"
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
+      </Head>
+
+
+      <SessionProvider session={pageProps.session} >
+        <AuthWrapper>
+          <Navbar />
+          <Component {...pageProps} />
           <ToastContainer />
           <Footer />
           <Facebook />
