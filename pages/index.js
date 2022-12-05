@@ -8,6 +8,7 @@ import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import { isMobile } from 'react-device-detect';
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 
 export default function Home({ posts, section2 }) {
 

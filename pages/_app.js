@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Head from 'next/head';
 import Facebook from '../components/Facebook';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
 
