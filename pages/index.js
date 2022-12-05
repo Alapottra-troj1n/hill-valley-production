@@ -78,6 +78,14 @@ export default function Home({ posts, section2 }) {
           content="Hill Valley Production" />
         <meta name="description" content="A team of young passionate photographer and cinematographer based in CHT Bangladesh." />
         <link rel="icon" href="/favicon.png" />
+        <Script
+            id="Adsense-id"
+            data-ad-client="ca-pub-1915872321700904"
+            async="true"
+            strategy="beforeInteractive"
+            crossorigin="anonymous"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          />
       </Head>
 
 
