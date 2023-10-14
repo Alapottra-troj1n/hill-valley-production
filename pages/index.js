@@ -102,7 +102,7 @@ export default function Home({ posts, section2 }) {
 
       {/*******  2ND SECTION *************/}
 
-      <div className='py-20 px-1 lg:px-32 container mx-auto  font-type '>
+      <div className='py-20 px-1 md:px-32 container mx-auto  font-type '>
 
         <h2 className='font-display text-center text-3xl lg:text-5xl' >About Us</h2>
         <div className='border-b-2 mt-7 w-[20%] mx-auto border-main' ></div>

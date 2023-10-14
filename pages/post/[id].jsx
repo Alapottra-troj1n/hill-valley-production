@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import connectDb from '../../lib/connectDb';
 const { ObjectId } = require("mongodb");
 import { isMobile } from 'react-device-detect';
-import { animate, motion } from "framer-motion";
-
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import "react-photo-view/dist/react-photo-view.css";
 const Post = ({ data }) => {
 
     const [postBg, setPostBg] = useState('')
@@ -34,39 +34,68 @@ const Post = ({ data }) => {
 
 
                 {/*************** PHOTOS START FROM HERE ***************/}
+                <PhotoProvider
+          maskOpacity={0.5}
+          toolbarRender={({ onScale, scale }) => {
+            return (
+              <>
+                <svg
+                  className="PhotoView-Slider__toolbarIcon"
+                  onClick={() => onScale(scale + 1)}
+                />
+                <svg
+                  className="PhotoView-Slider__toolbarIcon"
+                  onClick={() => onScale(scale - 1)}
+                />
+              </>
+            );
+          }}
+        >
                 <h2 className='leading-6 text-xs lg:text-sm lg:leading-7'>{data[0]?.story ? data[0].story : ''}</h2>
 
                 <div className="py-20 grid grid-cols-1 lg:px-0 gap-10" >
 
 
 
-                    <div className="relative lg:h-[700px] h-[300px] w-full ">
+                    <div className="relative lg:h-[700px] h-[300px] w-full  cursor-pointer">
+                    <PhotoView src={data[0].img1}>
                         <Image src={data[0].img1} alt='img1' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                     </div>
 
-                    <div className="relative lg:h-[700px] h-[300px] w-full " >
+                    <div className="relative lg:h-[700px] h-[300px] w-full  cursor-pointer" >
+                    <PhotoView src={data[0].img2}>
                         <Image src={data[0].img2} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                     </div>
 
                     {/***************** 2 COLUMNS *****************/}
 
                     <div className="grid grid-cols-2 gap-10">
 
-                        <div className="relative lg:h-[700px] h-[200px] w-full " >
-                            <Image src={data[0].img3} alt='img3' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <div className="relative lg:h-[700px] h-[200px] w-full  cursor-pointer" >
+                        <PhotoView src={data[0].img3}>
+                        <Image src={data[0].img3} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                         </div>
-                        <div className="relative lg:h-[700px] h-[200px] w-full " >
-                            <Image src={data[0].img4} alt='img4' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <div className="relative lg:h-[700px] h-[200px] w-full  cursor-pointer" >
+                        <PhotoView src={data[0].img4}>
+                        <Image src={data[0].img4} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                         </div>
 
                     </div>
 
-                    <div className="relative lg:h-[700px] h-[300px] w-full " >
-                        <Image src={data[0].img5} alt='img5' layout='fill' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full  cursor-pointer" >
+                    <PhotoView src={data[0].img5}>
+                        <Image src={data[0].img5} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                     </div>
 
-                    <div className="relative lg:h-[700px] h-[300px] w-full " >
-                        <Image src={data[0].img6} alt='img6' layout='fill' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full  cursor-pointer" >
+                    <PhotoView src={data[0].img6}>
+                        <Image src={data[0].img6} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                     </div>
 
 
@@ -74,29 +103,39 @@ const Post = ({ data }) => {
 
                     <div className="grid grid-cols-2 gap-10">
 
-                        <div className="relative lg:h-[700px] h-[200px] w-full " >
-                            <Image src={data[0].img7} alt='img7' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <div className="relative lg:h-[700px] h-[200px] w-full  cursor-pointer" >
+                        <PhotoView src={data[0].img7}>
+                        <Image src={data[0].img7} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                         </div>
-                        <div className="relative lg:h-[700px] h-[200px] w-full " >
-                            <Image src={data[0].img8} alt='img8' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        <div className="relative lg:h-[700px] h-[200px] w-full  cursor-pointer" >
+                        <PhotoView src={data[0].img8}>
+                        <Image src={data[0].img8} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                         </div>
 
                     </div>
 
 
 
-                    <div className="relative lg:h-[700px] h-[300px] w-full " >
-                        <Image src={data[0].img9} layout='fill' alt='img9' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full  cursor-pointer" >
+                    <PhotoView src={data[0].img9}>
+                        <Image src={data[0].img9} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                     </div>
 
-                    <div className="relative lg:h-[700px] h-[300px] w-full " >
-                        <Image src={data[0].img10} layout='fill' alt='img10' objectFit='cover' objectPosition={'center'} />
+                    <div className="relative lg:h-[700px] h-[300px] w-full  cursor-pointer" >
+                    <PhotoView src={data[0].img10}>
+                        <Image src={data[0].img10} alt='img2' layout='fill' objectFit='cover' objectPosition={'center'} />
+                        </PhotoView>
                     </div>
 
 
 
 
                 </div>
+
+                </PhotoProvider>
 
 
 
